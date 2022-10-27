@@ -1,0 +1,425 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4. Funciones &#8212; documentación de Python I - 0.1</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?2022.1" />
+    
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="prev" title="3. Iteraciones y Condicionales" href="3_loops.html" /><link rel="shortcut icon" type="image/png" href="../_static/py.svg" />
+            <script type="text/javascript" src="../_static/copybutton.js"></script>
+            <script type="text/javascript" src="../_static/menu.js"></script> 
+  </head>
+<body>
+<div class="mobile-nav">
+    <input type="checkbox" id="menuToggler" class="toggler__input" aria-controls="navigation"
+           aria-pressed="false" aria-expanded="false" role="button" aria-label="Menu" />
+    <label for="menuToggler" class="toggler__label">
+        <span></span>
+    </label>
+    <nav class="nav-content" role="navigation">
+         <a href="https://www.python.org/" class="nav-logo">
+             <img src="../_static/py.svg" alt="Logo"/>
+         </a>
+        <div class="version_switcher_placeholder"></div>
+        <form role="search" class="search" action="../search.html" method="get">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="search-icon">
+                <path fill-rule="nonzero"
+                        d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#444"></path>
+            </svg>
+            <input type="text" name="q" aria-label="Búsqueda rápida"/>
+            <input type="submit" value="Ir a"/>
+        </form>
+    </nav>
+    <div class="menu-wrapper">
+        <nav class="menu" role="navigation" aria-label="main navigation">
+            <div class="language_switcher_placeholder"></div>
+  <div>
+    <h3><a href="../index.html">Tabla de contenido</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">4. Funciones</a><ul>
+<li><a class="reference internal" href="#funciones-internas">4.1. Funciones Internas</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Tema anterior</h4>
+    <p class="topless"><a href="3_loops.html"
+                          title="capítulo anterior"><span class="section-number">3. </span>Iteraciones y Condicionales</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docs/4_funciones.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </nav>
+    </div>
+</div>
+  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             accesskey="I">índice</a></li>
+        <li class="right" >
+          <a href="3_loops.html" title="3. Iteraciones y Condicionales"
+             accesskey="P">anterior</a> |</li>
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../index.html">documentación de Python I - 0.1</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Funciones</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../search.html" method="get">
+          <input placeholder="Búsqueda rápida" aria-label="Búsqueda rápida" type="text" name="q" />
+          <input type="submit" value="Ir a" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="funciones">
+<h1><span class="section-number">4. </span>Funciones<a class="headerlink" href="#funciones" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En el ap’itulo anterior hemos aprendido que las variables etiquetan datos. Las funciones permiten estabkecer relaciones entre variabes</p>
+<div class="section" id="funciones-internas">
+<h2><span class="section-number">4.1. </span>Funciones Internas<a class="headerlink" href="#funciones-internas" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section docutils container" id="built-in-functions">
+<p class="rubric" id="builtins">Funciones Internas
+Functions<a class="reference external" href="#built-in-functions">¶</a></p>
+<p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int">Lista en orden alfabético.</a></p>
+<div class="responsive-table-container docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 23%" />
+<col style="width: 26%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Built-in
+Functions</p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="line docutils container">
+<p><strong>A</strong></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">abs()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">aiter()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">all()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">any()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">anext()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ascii()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>B</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">bin()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">breakpoint()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">bytearray()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">bytes()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>C</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">callable()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">chr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">compile()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">complex()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>D</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">delattr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">dict()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">divmod()</span></code></p>
+</div>
+</td>
+<td><div class="line docutils container">
+<p><strong>E</strong></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">enumerate()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">eval()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">exec()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>F</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">filter()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">float()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">format()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">frozenset()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>G</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">getattr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">globals()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>H</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">hasattr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">hash()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">help()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">hex()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>I</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">id()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">input()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">int()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">isinstance()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">issubclass()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">iter()</span></code></p>
+</div>
+</td>
+<td><div class="line docutils container">
+<p><strong>L</strong></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">len()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">list()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">locals()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>M</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">map()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">max()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">memoryview()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">min()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>N</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">next()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>O</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">object()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">oct()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">open()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">ord()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>P</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">pow()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">property()</span></code></p>
+</div>
+</td>
+<td><div class="line docutils container">
+<p><strong>R</strong></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">range()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">repr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">reversed()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">round()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>S</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">set()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">setattr()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">slice()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">sorted()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">staticmethod()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">str()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">super()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><strong>T</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">tuple()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">type()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>V</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">vars()</span></code></p>
+</div>
+<div class="line docutils container">
+<blockquote>
+<div><p><strong>Z</strong></p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">zip()</span></code></p>
+</div>
+<div class="line docutils container">
+<p><code class="docutils literal notranslate"><span class="pre">__import()__</span></code></p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Además de las funciones internas, tenemos a nuestra disposición una gama vastísima de módulos disponibles en código abierto que se halla en un desarrollo muy activo.  .. math: <cite>α_t(i) = P(O_1, O_2, … O_t, q_t = S_i λ)</cite></p>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Tabla de contenido</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">4. Funciones</a><ul>
+<li><a class="reference internal" href="#funciones-internas">4.1. Funciones Internas</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Tema anterior</h4>
+    <p class="topless"><a href="3_loops.html"
+                          title="capítulo anterior"><span class="section-number">3. </span>Iteraciones y Condicionales</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>Esta página</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/docs/4_funciones.rst.txt"
+            rel="nofollow">Mostrar el código</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Búsqueda rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir a" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navegación</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="Índice General"
+             >índice</a></li>
+        <li class="right" >
+          <a href="3_loops.html" title="3. Iteraciones y Condicionales"
+             >anterior</a> |</li>
+          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><a href="https://www.python.org/">Python</a> &#187;</li>
+          <li class="switchers">
+            <div class="language_switcher_placeholder"></div>
+            <div class="version_switcher_placeholder"></div>
+          </li>
+          <li>
+              
+              <a href="../index.html">documentación de Python I - 0.1</a> &#187;
+              
+          </li>
+        <li class="nav-item nav-item-this"><a href=""><span class="section-number">4. </span>Funciones</a></li>
+                <li class="right">
+                    
+
+    <div class="inline-search" role="search">
+        <form class="inline-search" action="../search.html" method="get">
+          <input placeholder="Búsqueda rápida" aria-label="Búsqueda rápida" type="text" name="q" />
+          <input type="submit" value="Ir a" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+                     |
+                </li>
+            
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; Copyright 2022, Samuel Gil.
+    <br />
+    This page is licensed under the Python Software Foundation License Version 2.
+    <br />
+    Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
+    <br />
+    
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Actualizado por última vez en None.
+    
+    <br />
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.4.0.
+    </div>
+
+  </body>
+</html>

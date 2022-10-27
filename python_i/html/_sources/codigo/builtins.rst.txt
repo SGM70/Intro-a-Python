@@ -1,0 +1,3123 @@
+.. container:: mobile-nav
+
+   |Logo|
+
+   .. container:: version_switcher_placeholder
+
+      dev (3.12)pre (3.11)3.10.53.93.83.73.63.52.7
+
+   |image1|
+
+   .. container:: menu-wrapper
+
+      .. container:: language_switcher_placeholder
+
+         EnglishSpanishFrenchJapaneseKoreanBrazilian
+         PortugueseSimplified ChineseTraditional Chinese
+
+      .. rubric:: Previous topic
+         :name: previous-topic
+
+      `Introduction <https://docs.python.org/3/library/intro.html>`__
+
+      .. rubric:: Next topic
+         :name: next-topic
+
+      `Built-in
+      Constants <https://docs.python.org/3/library/constants.html>`__
+
+      .. container::
+
+         .. rubric:: This Page
+            :name: this-page
+
+         -  `Report a Bug <https://docs.python.org/3/bugs.html>`__
+         -  `Show
+            Source <https://github.com/python/cpython/blob/3.10/Doc/library/functions.rst>`__
+
+.. container:: related
+
+   .. rubric:: Navigation
+      :name: navigation
+
+   -  `index <https://docs.python.org/3/genindex.html>`__
+
+   -  `modules <https://docs.python.org/3/py-modindex.html>`__ \|
+
+   -  `next <https://docs.python.org/3/library/constants.html>`__ \|
+
+   -  `previous <https://docs.python.org/3/library/intro.html>`__ \|
+
+   -  |python logo|
+
+   -  `Python <https://www.python.org/>`__ »
+
+   -  
+
+      .. container:: language_switcher_placeholder
+
+         EnglishSpanishFrenchJapaneseKoreanBrazilian
+         PortugueseSimplified ChineseTraditional Chinese
+
+      .. container:: version_switcher_placeholder
+
+         dev (3.12)pre (3.11)3.10.53.93.83.73.63.52.7
+
+   -  
+
+   -  `3.10.5 Documentation <https://docs.python.org/3/index.html>`__ »
+
+   -  `The Python Standard
+      Library <https://docs.python.org/3/library/index.html>`__ »
+
+   -  `Built-in Functions <>`__
+
+   -  
+
+      .. container:: inline-search
+
+      \|
+
+.. container:: document
+
+   .. container:: documentwrapper
+
+      .. container:: bodywrapper
+
+         .. container:: body
+
+            .. container:: section
+               :name: built-in-functions
+
+               .. rubric:: Built-in
+                  Functions\ `¶ <#built-in-functions>`__
+                  :name: built-in-functions
+
+               The Python interpreter has a number of functions and
+               types built into it that are always available. They are
+               listed here in alphabetical order.
+
+               .. container:: responsive-table__container
+
+                  +-----------------+----------------+----------------+-----------------+
+                  | Built-in        |                |                |                 |
+                  | Functions       |                |                |                 |
+                  +=================+================+================+=================+
+                  | .. container::  | .. container:: | .. container:: | .. container::  |
+                  | line            | line           | line           | line            |
+                  |                 |                |                |                 |
+                  |    **A**        |    **E**       |    **L**       |    **R**        |
+                  |                 |                |                |                 |
+                  | .. container::  | .. container:: | .. container:: | .. container::  |
+                  | line            | line           | line           | line            |
+                  |                 |                |                |                 |
+                  |    ```ab        |    ```e        |    ```len      |                 |
+                  | s()`` <#abs>`__ | numerate()`` < | ()`` <#len>`__ |  ```range()`` < |
+                  |                 | #enumerate>`__ |                | #func-range>`__ |
+                  | .. container::  |                | .. container:: |                 |
+                  | line            | .. container:: | line           | .. container::  |
+                  |                 | line           |                | line            |
+                  |    ```aiter(    |                |                |                 |
+                  | )`` <#aiter>`__ |    ```eval(    |  ```list()`` < |    ```repr      |
+                  |                 | )`` <#eval>`__ | #func-list>`__ | ()`` <#repr>`__ |
+                  | .. container::  |                |                |                 |
+                  | line            | .. container:: | .. container:: | .. container::  |
+                  |                 | line           | line           | line            |
+                  |    ```al        |                |                |                 |
+                  | l()`` <#all>`__ |    ```exec(    |                |                 |
+                  |                 | )`` <#exec>`__ |   ```locals()` | ```reversed()`` |
+                  | .. container::  |                | ` <#locals>`__ |  <#reversed>`__ |
+                  | line            | .. container:: |                |                 |
+                  |                 | line           | .. container:: | .. container::  |
+                  |    ```an        |                | line           | line            |
+                  | y()`` <#any>`__ | .. container:: |                |                 |
+                  |                 | line           | .. container:: |    ```round(    |
+                  | .. container::  |                | line           | )`` <#round>`__ |
+                  | line            |    **F**       |                |                 |
+                  |                 |                |    **M**       | .. container::  |
+                  |    ```anext(    | .. container:: |                | line            |
+                  | )`` <#anext>`__ | line           | .. container:: |                 |
+                  |                 |                | line           | .. container::  |
+                  | .. container::  |                |                | line            |
+                  | line            |   ```filter()` |    ```map      |                 |
+                  |                 | ` <#filter>`__ | ()`` <#map>`__ |    **S**        |
+                  |    ```ascii(    |                |                |                 |
+                  | )`` <#ascii>`__ | .. container:: | .. container:: | .. container::  |
+                  |                 | line           | line           | line            |
+                  | .. container::  |                |                |                 |
+                  | line            |    ```float()  |    ```max      |    ```set()``   |
+                  |                 | `` <#float>`__ | ()`` <#max>`__ |  <#func-set>`__ |
+                  | .. container::  |                |                |                 |
+                  | line            | .. container:: | .. container:: | .. container::  |
+                  |                 | line           | line           | line            |
+                  |    **B**        |                |                |                 |
+                  |                 |                |    ```memoryvi |                 |
+                  | .. container::  |   ```format()` | ew()`` <#func- |   ```setattr()` |
+                  | line            | ` <#format>`__ | memoryview>`__ | ` <#setattr>`__ |
+                  |                 |                |                |                 |
+                  |    ```bi        | .. container:: | .. container:: | .. container::  |
+                  | n()`` <#bin>`__ | line           | line           | line            |
+                  |                 |                |                |                 |
+                  | .. container::  |    ```frozen   |    ```min      |    ```slice(    |
+                  | line            | set()`` <#func | ()`` <#min>`__ | )`` <#slice>`__ |
+                  |                 | -frozenset>`__ |                |                 |
+                  |    ```bool      |                | .. container:: | .. container::  |
+                  | ()`` <#bool>`__ | .. container:: | line           | line            |
+                  |                 | line           |                |                 |
+                  | .. container::  |                | .. container:: |    ```sorted()  |
+                  | line            | .. container:: | line           | `` <#sorted>`__ |
+                  |                 | line           |                |                 |
+                  |    ```b         |                |    **N**       | .. container::  |
+                  | reakpoint()`` < |    **G**       |                | line            |
+                  | #breakpoint>`__ |                | .. container:: |                 |
+                  |                 | .. container:: | line           |    ```stati     |
+                  | .. container::  | line           |                | cmethod()`` <#s |
+                  | line            |                |    ```next(    | taticmethod>`__ |
+                  |                 |                | )`` <#next>`__ |                 |
+                  |    ```byte      | ```getattr()`` |                | .. container::  |
+                  | array()`` <#fun |  <#getattr>`__ | .. container:: | line            |
+                  | c-bytearray>`__ |                | line           |                 |
+                  |                 | .. container:: |                |    ```str()``   |
+                  | .. container::  | line           | .. container:: |  <#func-str>`__ |
+                  | line            |                | line           |                 |
+                  |                 |                |                | .. container::  |
+                  |                 | ```globals()`` |    **O**       | line            |
+                  |  ```bytes()`` < |  <#globals>`__ |                |                 |
+                  | #func-bytes>`__ |                | .. container:: |    ```su        |
+                  |                 | .. container:: | line           | m()`` <#sum>`__ |
+                  | .. container::  | line           |                |                 |
+                  | line            |                |                | .. container::  |
+                  |                 | .. container:: |   ```object()` | line            |
+                  | .. container::  | line           | ` <#object>`__ |                 |
+                  | line            |                |                |    ```super(    |
+                  |                 |    **H**       | .. container:: | )`` <#super>`__ |
+                  |    **C**        |                | line           |                 |
+                  |                 | .. container:: |                | .. container::  |
+                  | .. container::  | line           |    ```oct      | line            |
+                  | line            |                | ()`` <#oct>`__ |                 |
+                  |                 |                |                | .. container::  |
+                  |                 | ```hasattr()`` | .. container:: | line            |
+                  | ```callable()`` |  <#hasattr>`__ | line           |                 |
+                  |  <#callable>`__ |                |                |    **T**        |
+                  |                 | .. container:: |    ```open(    |                 |
+                  | .. container::  | line           | )`` <#open>`__ | .. container::  |
+                  | line            |                |                | line            |
+                  |                 |    ```hash(    | .. container:: |                 |
+                  |    ```ch        | )`` <#hash>`__ | line           |                 |
+                  | r()`` <#chr>`__ |                |                |  ```tuple()`` < |
+                  |                 | .. container:: |    ```ord      | #func-tuple>`__ |
+                  | .. container::  | line           | ()`` <#ord>`__ |                 |
+                  | line            |                |                | .. container::  |
+                  |                 |    ```help(    | .. container:: | line            |
+                  |    ```cla       | )`` <#help>`__ | line           |                 |
+                  | ssmethod()`` <# |                |                |    ```type      |
+                  | classmethod>`__ | .. container:: | .. container:: | ()`` <#type>`__ |
+                  |                 | line           | line           |                 |
+                  | .. container::  |                |                | .. container::  |
+                  | line            |    ```hex      |    **P**       | line            |
+                  |                 | ()`` <#hex>`__ |                |                 |
+                  |                 |                | .. container:: | .. container::  |
+                  |   ```compile()` | .. container:: | line           | line            |
+                  | ` <#compile>`__ | line           |                |                 |
+                  |                 |                |    ```pow      |    **V**        |
+                  | .. container::  | .. container:: | ()`` <#pow>`__ |                 |
+                  | line            | line           |                | .. container::  |
+                  |                 |                | .. container:: | line            |
+                  |                 |    **I**       | line           |                 |
+                  |   ```complex()` |                |                |    ```vars      |
+                  | ` <#complex>`__ | .. container:: |    ```print()  | ()`` <#vars>`__ |
+                  |                 | line           | `` <#print>`__ |                 |
+                  | .. container::  |                |                | .. container::  |
+                  | line            |    ```i        | .. container:: | line            |
+                  |                 | d()`` <#id>`__ | line           |                 |
+                  | .. container::  |                |                | .. container::  |
+                  | line            | .. container:: |    ``          | line            |
+                  |                 | line           | `property()``  |                 |
+                  |    **D**        |                | <#property>`__ |    **Z**        |
+                  |                 |    ```input()  |                |                 |
+                  | .. container::  | `` <#input>`__ | .. container:: | .. container::  |
+                  | line            |                | line           | line            |
+                  |                 | .. container:: |                |                 |
+                  |                 | line           | .. container:: |    ```zi        |
+                  |   ```delattr()` |                | line           | p()`` <#zip>`__ |
+                  | ` <#delattr>`__ |    ```int      |                |                 |
+                  |                 | ()`` <#int>`__ | .. container:: | .. container::  |
+                  | .. container::  |                | line           | line            |
+                  | line            | .. container:: |                |                 |
+                  |                 | line           | .. container:: | .. container::  |
+                  |    ```dict()``  |                | line           | line            |
+                  | <#func-dict>`__ |    ```isi      |                |                 |
+                  |                 | nstance()`` <# |                |    **\_**       |
+                  | .. container::  | isinstance>`__ |                |                 |
+                  | line            |                |                | .. container::  |
+                  |                 | .. container:: |                | line            |
+                  |    ```di        | line           |                |                 |
+                  | r()`` <#dir>`__ |                |                |    ``           |
+                  |                 |    ```iss      |                | `__import__()`` |
+                  | .. container::  | ubclass()`` <# |                |  <#import__>`__ |
+                  | line            | issubclass>`__ |                |                 |
+                  |                 |                |                |                 |
+                  |    ```divmod()  | .. container:: |                |                 |
+                  | `` <#divmod>`__ | line           |                |                 |
+                  |                 |                |                |                 |
+                  | .. container::  |    ```iter(    |                |                 |
+                  | line            | )`` <#iter>`__ |                |                 |
+                  |                 |                |                |                 |
+                  +-----------------+----------------+----------------+-----------------+
+
+               ``abs``\ (\ *x*\ )\ `¶ <#abs>`__
+                  Return the absolute value of a number. The argument
+                  may be an integer, a floating point number, or an
+                  object implementing ``__abs__()``. If the argument is
+                  a complex number, its magnitude is returned.
+
+               ``aiter``\ (\ *async_iterable*\ )\ `¶ <#aiter>`__
+                  Return an `asynchronous
+                  iterator <https://docs.python.org/3/glossary.html#term-asynchronous-iterator>`__
+                  for an `asynchronous
+                  iterable <https://docs.python.org/3/glossary.html#term-asynchronous-iterable>`__.
+                  Equivalent to calling ``x.__aiter__()``.
+
+                  Note: Unlike ```iter()`` <#iter>`__,
+                  ```aiter()`` <#aiter>`__ has no 2-argument variant.
+
+                  .. container:: versionadded
+
+                     New in version 3.10.
+
+               ``all``\ (\ *iterable*\ )\ `¶ <#all>`__
+                  Return ``True`` if all elements of the *iterable* are
+                  true (or if the iterable is empty). Equivalent to:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           def all(iterable):
+                               for element in iterable:
+                                   if not element:
+                                       return False
+                               return True
+
+               *awaitable* ``anext``\ (\ *async_iterator*\ [, *default*\ ])\ `¶ <#anext>`__
+                  When awaited, return the next item from the given
+                  `asynchronous
+                  iterator <https://docs.python.org/3/glossary.html#term-asynchronous-iterator>`__,
+                  or *default* if given and the iterator is exhausted.
+
+                  This is the async variant of the
+                  ```next()`` <#next>`__ builtin, and behaves similarly.
+
+                  This calls the
+                  ```__anext__()`` <https://docs.python.org/3/reference/datamodel.html#object.__anext__>`__
+                  method of *async_iterator*, returning an
+                  `awaitable <https://docs.python.org/3/glossary.html#term-awaitable>`__.
+                  Awaiting this returns the next value of the iterator.
+                  If *default* is given, it is returned if the iterator
+                  is exhausted, otherwise
+                  ```StopAsyncIteration`` <https://docs.python.org/3/library/exceptions.html#StopAsyncIteration>`__
+                  is raised.
+
+                  .. container:: versionadded
+
+                     New in version 3.10.
+
+               ``any``\ (\ *iterable*\ )\ `¶ <#any>`__
+                  Return ``True`` if any element of the *iterable* is
+                  true. If the iterable is empty, return ``False``.
+                  Equivalent to:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           def any(iterable):
+                               for element in iterable:
+                                   if element:
+                                       return True
+                               return False
+
+               ``ascii``\ (\ *object*\ )\ `¶ <#ascii>`__
+                  As ```repr()`` <#repr>`__, return a string containing
+                  a printable representation of an object, but escape
+                  the non-ASCII characters in the string returned by
+                  ```repr()`` <#repr>`__ using ``\x``, ``\u``, or ``\U``
+                  escapes. This generates a string similar to that
+                  returned by ```repr()`` <#repr>`__ in Python 2.
+
+               ``bin``\ (\ *x*\ )\ `¶ <#bin>`__
+                  Convert an integer number to a binary string prefixed
+                  with “0b”. The result is a valid Python expression. If
+                  *x* is not a Python ```int`` <#int>`__ object, it has
+                  to define an ``__index__()`` method that returns an
+                  integer. Some examples:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> bin(3)
+                           '0b11'
+                           >>> bin(-10)
+                           '-0b1010'
+
+                  If the prefix “0b” is desired or not, you can use
+                  either of the following ways.
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> format(14, '#b'), format(14, 'b')
+                           ('0b1110', '1110')
+                           >>> f'{14:#b}', f'{14:b}'
+                           ('0b1110', '1110')
+
+                  See also ```format()`` <#format>`__ for more
+                  information.
+
+               *class* ``bool``\ ([\ *x*\ ])\ `¶ <#bool>`__
+                  Return a Boolean value, i.e. one of ``True`` or
+                  ``False``. *x* is converted using the standard `truth
+                  testing
+                  procedure <https://docs.python.org/3/library/stdtypes.html#truth>`__.
+                  If *x* is false or omitted, this returns ``False``;
+                  otherwise, it returns ``True``. The
+                  ```bool`` <#bool>`__ class is a subclass of
+                  ```int`` <#int>`__ (see `Numeric Types — int, float,
+                  complex <https://docs.python.org/3/library/stdtypes.html#typesnumeric>`__).
+                  It cannot be subclassed further. Its only instances
+                  are ``False`` and ``True`` (see `Boolean
+                  Values <https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values>`__).
+
+                  .. container:: versionchanged
+                     :name: index-0
+
+                     Changed in version 3.7:\ *x* is now a
+                     positional-only parameter.
+
+               ``breakpoint``\ (\ *\*args*, *\*\*kws*\ )\ `¶ <#breakpoint>`__
+                  This function drops you into the debugger at the call
+                  site. Specifically, it calls
+                  ```sys.breakpointhook()`` <https://docs.python.org/3/library/sys.html#sys.breakpointhook>`__,
+                  passing ``args`` and ``kws`` straight through. By
+                  default, ``sys.breakpointhook()`` calls
+                  ```pdb.set_trace()`` <https://docs.python.org/3/library/pdb.html#pdb.set_trace>`__
+                  expecting no arguments. In this case, it is purely a
+                  convenience function so you don’t have to explicitly
+                  import
+                  ```pdb`` <https://docs.python.org/3/library/pdb.html#module-pdb>`__
+                  or type as much code to enter the debugger. However,
+                  ```sys.breakpointhook()`` <https://docs.python.org/3/library/sys.html#sys.breakpointhook>`__
+                  can be set to some other function and
+                  ```breakpoint()`` <#breakpoint>`__ will automatically
+                  call that, allowing you to drop into the debugger of
+                  choice.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``builtins.breakpoint`` with argument
+                  ``breakpointhook``.
+
+                  .. container:: versionadded
+
+                     New in version 3.7.
+
+               *class* ``bytearray``\ ([\ *source*\ [, *encoding*\ [, *errors*\ ]]])
+                  Return a new array of bytes. The
+                  ```bytearray`` <https://docs.python.org/3/library/stdtypes.html#bytearray>`__
+                  class is a mutable sequence of integers in the range 0
+                  <= x < 256. It has most of the usual methods of
+                  mutable sequences, described in `Mutable Sequence
+                  Types <https://docs.python.org/3/library/stdtypes.html#typesseq-mutable>`__,
+                  as well as most methods that the
+                  ```bytes`` <https://docs.python.org/3/library/stdtypes.html#bytes>`__
+                  type has, see `Bytes and Bytearray
+                  Operations <https://docs.python.org/3/library/stdtypes.html#bytes-methods>`__.
+
+                  The optional *source* parameter can be used to
+                  initialize the array in a few different ways:
+
+                  -  If it is a *string*, you must also give the
+                     *encoding* (and optionally, *errors*) parameters;
+                     ```bytearray()`` <https://docs.python.org/3/library/stdtypes.html#bytearray>`__
+                     then converts the string to bytes using
+                     ```str.encode()`` <https://docs.python.org/3/library/stdtypes.html#str.encode>`__.
+
+                  -  If it is an *integer*, the array will have that
+                     size and will be initialized with null bytes.
+
+                  -  If it is an object conforming to the `buffer
+                     interface <https://docs.python.org/3/c-api/buffer.html#bufferobjects>`__,
+                     a read-only buffer of the object will be used to
+                     initialize the bytes array.
+
+                  -  If it is an *iterable*, it must be an iterable of
+                     integers in the range ``0 <= x < 256``, which are
+                     used as the initial contents of the array.
+
+                  Without an argument, an array of size 0 is created.
+
+                  See also `Binary Sequence Types — bytes, bytearray,
+                  memoryview <https://docs.python.org/3/library/stdtypes.html#binaryseq>`__
+                  and `Bytearray
+                  Objects <https://docs.python.org/3/library/stdtypes.html#typebytearray>`__.
+
+               *class* ``bytes``\ ([\ *source*\ [, *encoding*\ [, *errors*\ ]]])
+                  Return a new “bytes” object which is an immutable
+                  sequence of integers in the range ``0 <= x < 256``.
+                  ```bytes`` <https://docs.python.org/3/library/stdtypes.html#bytes>`__
+                  is an immutable version of
+                  ```bytearray`` <https://docs.python.org/3/library/stdtypes.html#bytearray>`__
+                  – it has the same non-mutating methods and the same
+                  indexing and slicing behavior.
+
+                  Accordingly, constructor arguments are interpreted as
+                  for
+                  ```bytearray()`` <https://docs.python.org/3/library/stdtypes.html#bytearray>`__.
+
+                  Bytes objects can also be created with literals, see
+                  `String and Bytes
+                  literals <https://docs.python.org/3/reference/lexical_analysis.html#strings>`__.
+
+                  See also `Binary Sequence Types — bytes, bytearray,
+                  memoryview <https://docs.python.org/3/library/stdtypes.html#binaryseq>`__,
+                  `Bytes
+                  Objects <https://docs.python.org/3/library/stdtypes.html#typebytes>`__,
+                  and `Bytes and Bytearray
+                  Operations <https://docs.python.org/3/library/stdtypes.html#bytes-methods>`__.
+
+               ``callable``\ (\ *object*\ )\ `¶ <#callable>`__
+                  Return
+                  ```True`` <https://docs.python.org/3/library/constants.html#True>`__
+                  if the *object* argument appears callable,
+                  ```False`` <https://docs.python.org/3/library/constants.html#False>`__
+                  if not. If this returns ``True``, it is still possible
+                  that a call fails, but if it is ``False``, calling
+                  *object* will never succeed. Note that classes are
+                  callable (calling a class returns a new instance);
+                  instances are callable if their class has a
+                  ``__call__()`` method.
+
+                  .. container:: versionadded
+
+                     New in version 3.2:This function was first removed
+                     in Python 3.0 and then brought back in Python 3.2.
+
+               ``chr``\ (\ *i*\ )\ `¶ <#chr>`__
+                  Return the string representing a character whose
+                  Unicode code point is the integer *i*. For example,
+                  ``chr(97)`` returns the string ``'a'``, while
+                  ``chr(8364)`` returns the string ``'€'``. This is the
+                  inverse of ```ord()`` <#ord>`__.
+
+                  The valid range for the argument is from 0 through
+                  1,114,111 (0x10FFFF in base 16).
+                  ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                  will be raised if *i* is outside that range.
+
+               ``@``\ ``classmethod``\ `¶ <#classmethod>`__
+                  Transform a method into a class method.
+
+                  A class method receives the class as an implicit first
+                  argument, just like an instance method receives the
+                  instance. To declare a class method, use this idiom:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class C:
+                               @classmethod
+                               def f(cls, arg1, arg2): ...
+
+                  The ``@classmethod`` form is a function
+                  `decorator <https://docs.python.org/3/glossary.html#term-decorator>`__
+                  – see `Function
+                  definitions <https://docs.python.org/3/reference/compound_stmts.html#function>`__
+                  for details.
+
+                  A class method can be called either on the class (such
+                  as ``C.f()``) or on an instance (such as ``C().f()``).
+                  The instance is ignored except for its class. If a
+                  class method is called for a derived class, the
+                  derived class object is passed as the implied first
+                  argument.
+
+                  Class methods are different than C++ or Java static
+                  methods. If you want those, see
+                  ```staticmethod()`` <#staticmethod>`__ in this
+                  section. For more information on class methods, see
+                  `The standard type
+                  hierarchy <https://docs.python.org/3/reference/datamodel.html#types>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.9:Class methods can now wrap
+                     other
+                     `descriptors <https://docs.python.org/3/glossary.html#term-descriptor>`__
+                     such as ```property()`` <#property>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.10:Class methods now inherit
+                     the method attributes (``__module__``,
+                     ``__name__``, ``__qualname__``, ``__doc__`` and
+                     ``__annotations__``) and have a new ``__wrapped__``
+                     attribute.
+
+               ``compile``\ (\ *source*, *filename*, *mode*, *flags=0*, *dont_inherit=False*, *optimize=- 1*\ )\ `¶ <#compile>`__
+                  Compile the *source* into a code or AST object. Code
+                  objects can be executed by ```exec()`` <#exec>`__ or
+                  ```eval()`` <#eval>`__. *source* can either be a
+                  normal string, a byte string, or an AST object. Refer
+                  to the
+                  ```ast`` <https://docs.python.org/3/library/ast.html#module-ast>`__
+                  module documentation for information on how to work
+                  with AST objects.
+
+                  The *filename* argument should give the file from
+                  which the code was read; pass some recognizable value
+                  if it wasn’t read from a file (``'<string>'`` is
+                  commonly used).
+
+                  The *mode* argument specifies what kind of code must
+                  be compiled; it can be ``'exec'`` if *source* consists
+                  of a sequence of statements, ``'eval'`` if it consists
+                  of a single expression, or ``'single'`` if it consists
+                  of a single interactive statement (in the latter case,
+                  expression statements that evaluate to something other
+                  than ``None`` will be printed).
+
+                  The optional arguments *flags* and *dont_inherit*
+                  control which `compiler
+                  options <https://docs.python.org/3/library/ast.html#ast-compiler-flags>`__
+                  should be activated and which `future
+                  features <https://docs.python.org/3/reference/simple_stmts.html#future>`__
+                  should be allowed. If neither is present (or both are
+                  zero) the code is compiled with the same flags that
+                  affect the code that is calling
+                  ```compile()`` <#compile>`__. If the *flags* argument
+                  is given and *dont_inherit* is not (or is zero) then
+                  the compiler options and the future statements
+                  specified by the *flags* argument are used in addition
+                  to those that would be used anyway. If *dont_inherit*
+                  is a non-zero integer then the *flags* argument is it
+                  – the flags (future features and compiler options) in
+                  the surrounding code are ignored.
+
+                  Compiler options and future statements are specified
+                  by bits which can be bitwise ORed together to specify
+                  multiple options. The bitfield required to specify a
+                  given future feature can be found as the
+                  ``compiler_flag`` attribute on the ``_Feature``
+                  instance in the
+                  ```__future__`` <https://docs.python.org/3/library/__future__.html#module-__future__>`__
+                  module. `Compiler
+                  flags <https://docs.python.org/3/library/ast.html#ast-compiler-flags>`__
+                  can be found in
+                  ```ast`` <https://docs.python.org/3/library/ast.html#module-ast>`__
+                  module, with ``PyCF_`` prefix.
+
+                  The argument *optimize* specifies the optimization
+                  level of the compiler; the default value of ``-1``
+                  selects the optimization level of the interpreter as
+                  given by
+                  ```-O`` <https://docs.python.org/3/using/cmdline.html#cmdoption-O>`__
+                  options. Explicit levels are ``0`` (no optimization;
+                  ``__debug__`` is true), ``1`` (asserts are removed,
+                  ``__debug__`` is false) or ``2`` (docstrings are
+                  removed too).
+
+                  This function raises
+                  ```SyntaxError`` <https://docs.python.org/3/library/exceptions.html#SyntaxError>`__
+                  if the compiled source is invalid, and
+                  ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                  if the source contains null bytes.
+
+                  If you want to parse Python code into its AST
+                  representation, see
+                  ```ast.parse()`` <https://docs.python.org/3/library/ast.html#ast.parse>`__.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``compile`` with arguments ``source`` and
+                  ``filename``. This event may also be raised by
+                  implicit compilation.
+
+                  .. admonition::
+
+                     Note
+
+                     When compiling a string with multi-line code in
+                     ``'single'`` or ``'eval'`` mode, input must be
+                     terminated by at least one newline character. This
+                     is to facilitate detection of incomplete and
+                     complete statements in the
+                     ```code`` <https://docs.python.org/3/library/code.html#module-code>`__
+                     module.
+
+                  .. admonition::
+
+                     Warning
+
+                     It is possible to crash the Python interpreter with
+                     a sufficiently large/complex string when compiling
+                     to an AST object due to stack depth limitations in
+                     Python’s AST compiler.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.2:Allowed use of Windows and
+                     Mac newlines. Also, input in ``'exec'`` mode does
+                     not have to end in a newline anymore. Added the
+                     *optimize* parameter.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.5:Previously,
+                     ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                     was raised when null bytes were encountered in
+                     *source*.
+
+                  .. container:: versionadded
+
+                     New in version
+                     3.8:\ ``ast.PyCF_ALLOW_TOP_LEVEL_AWAIT`` can now be
+                     passed in flags to enable support for top-level
+                     ``await``, ``async for``, and ``async with``.
+
+               *class* ``complex``\ ([\ *real*\ [, *imag*\ ]])\ `¶ <#complex>`__
+                  Return a complex number with the value *real* +
+                  *imag*\ \*1j or convert a string or number to a
+                  complex number. If the first parameter is a string, it
+                  will be interpreted as a complex number and the
+                  function must be called without a second parameter.
+                  The second parameter can never be a string. Each
+                  argument may be any numeric type (including complex).
+                  If *imag* is omitted, it defaults to zero and the
+                  constructor serves as a numeric conversion like
+                  ```int`` <#int>`__ and ```float`` <#float>`__. If both
+                  arguments are omitted, returns ``0j``.
+
+                  For a general Python object ``x``, ``complex(x)``
+                  delegates to ``x.__complex__()``. If ``__complex__()``
+                  is not defined then it falls back to ``__float__()``.
+                  If ``__float__()`` is not defined then it falls back
+                  to ``__index__()``.
+
+                  .. admonition::
+
+                     Note
+
+                     When converting from a string, the string must not
+                     contain whitespace around the central ``+`` or
+                     ``-`` operator. For example, ``complex('1+2j')`` is
+                     fine, but ``complex('1 + 2j')`` raises
+                     ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__.
+
+                  The complex type is described in `Numeric Types — int,
+                  float,
+                  complex <https://docs.python.org/3/library/stdtypes.html#typesnumeric>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.6:Grouping digits with
+                     underscores as in code literals is allowed.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:Falls back to
+                     ``__index__()`` if ``__complex__()`` and
+                     ``__float__()`` are not defined.
+
+               ``delattr``\ (\ *object*, *name*\ )\ `¶ <#delattr>`__
+                  This is a relative of ```setattr()`` <#setattr>`__.
+                  The arguments are an object and a string. The string
+                  must be the name of one of the object’s attributes.
+                  The function deletes the named attribute, provided the
+                  object allows it. For example,
+                  ``delattr(x, 'foobar')`` is equivalent to
+                  ``del x.foobar``.
+
+               *class* ``dict``\ (\ *\*\*kwarg*\ )
+               *class* ``dict``\ (\ *mapping*, *\*\*kwarg*\ )
+               *class* ``dict``\ (\ *iterable*, *\*\*kwarg*\ )
+                  Create a new dictionary. The
+                  ```dict`` <https://docs.python.org/3/library/stdtypes.html#dict>`__
+                  object is the dictionary class. See
+                  ```dict`` <https://docs.python.org/3/library/stdtypes.html#dict>`__
+                  and `Mapping Types —
+                  dict <https://docs.python.org/3/library/stdtypes.html#typesmapping>`__
+                  for documentation about this class.
+
+                  For other containers see the built-in
+                  ```list`` <https://docs.python.org/3/library/stdtypes.html#list>`__,
+                  ```set`` <https://docs.python.org/3/library/stdtypes.html#set>`__,
+                  and
+                  ```tuple`` <https://docs.python.org/3/library/stdtypes.html#tuple>`__
+                  classes, as well as the
+                  ```collections`` <https://docs.python.org/3/library/collections.html#module-collections>`__
+                  module.
+
+               ``dir``\ ([\ *object*\ ])\ `¶ <#dir>`__
+                  Without arguments, return the list of names in the
+                  current local scope. With an argument, attempt to
+                  return a list of valid attributes for that object.
+
+                  If the object has a method named ``__dir__()``, this
+                  method will be called and must return the list of
+                  attributes. This allows objects that implement a
+                  custom ``__getattr__()`` or ``__getattribute__()``
+                  function to customize the way ```dir()`` <#dir>`__
+                  reports their attributes.
+
+                  If the object does not provide ``__dir__()``, the
+                  function tries its best to gather information from the
+                  object’s
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute, if defined, and from its type object. The
+                  resulting list is not necessarily complete and may be
+                  inaccurate when the object has a custom
+                  ``__getattr__()``.
+
+                  The default ```dir()`` <#dir>`__ mechanism behaves
+                  differently with different types of objects, as it
+                  attempts to produce the most relevant, rather than
+                  complete, information:
+
+                  -  If the object is a module object, the list contains
+                     the names of the module’s attributes.
+
+                  -  If the object is a type or class object, the list
+                     contains the names of its attributes, and
+                     recursively of the attributes of its bases.
+
+                  -  Otherwise, the list contains the object’s
+                     attributes’ names, the names of its class’s
+                     attributes, and recursively of the attributes of
+                     its class’s base classes.
+
+                  The resulting list is sorted alphabetically. For
+                  example:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> import struct
+                           >>> dir()   # show the names in the module namespace  
+                           ['__builtins__', '__name__', 'struct']
+                           >>> dir(struct)   # show the names in the struct module 
+                           ['Struct', '__all__', '__builtins__', '__cached__', '__doc__', '__file__',
+                            '__initializing__', '__loader__', '__name__', '__package__',
+                            '_clearcache', 'calcsize', 'error', 'pack', 'pack_into',
+                            'unpack', 'unpack_from']
+                           >>> class Shape:
+                           ...     def __dir__(self):
+                           ...         return ['area', 'perimeter', 'location']
+                           >>> s = Shape()
+                           >>> dir(s)
+                           ['area', 'location', 'perimeter']
+
+                  .. admonition::
+
+                     Note
+
+                     Because ```dir()`` <#dir>`__ is supplied primarily
+                     as a convenience for use at an interactive prompt,
+                     it tries to supply an interesting set of names more
+                     than it tries to supply a rigorously or
+                     consistently defined set of names, and its detailed
+                     behavior may change across releases. For example,
+                     metaclass attributes are not in the result list
+                     when the argument is a class.
+
+               ``divmod``\ (\ *a*, *b*\ )\ `¶ <#divmod>`__
+                  Take two (non-complex) numbers as arguments and return
+                  a pair of numbers consisting of their quotient and
+                  remainder when using integer division. With mixed
+                  operand types, the rules for binary arithmetic
+                  operators apply. For integers, the result is the same
+                  as ``(a // b, a % b)``. For floating point numbers the
+                  result is ``(q, a % b)``, where *q* is usually
+                  ``math.floor(a / b)`` but may be 1 less than that. In
+                  any case ``q * b + a % b`` is very close to *a*, if
+                  ``a % b`` is non-zero it has the same sign as *b*, and
+                  ``0 <= abs(a % b) < abs(b)``.
+
+               ``enumerate``\ (\ *iterable*, *start=0*\ )\ `¶ <#enumerate>`__
+                  Return an enumerate object. *iterable* must be a
+                  sequence, an
+                  `iterator <https://docs.python.org/3/glossary.html#term-iterator>`__,
+                  or some other object which supports iteration. The
+                  ```__next__()`` <https://docs.python.org/3/library/stdtypes.html#iterator.__next__>`__
+                  method of the iterator returned by
+                  ```enumerate()`` <#enumerate>`__ returns a tuple
+                  containing a count (from *start* which defaults to 0)
+                  and the values obtained from iterating over
+                  *iterable*.
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+                           >>> list(enumerate(seasons))
+                           [(0, 'Spring'), (1, 'Summer'), (2, 'Fall'), (3, 'Winter')]
+                           >>> list(enumerate(seasons, start=1))
+                           [(1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')]
+
+                  Equivalent to:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           def enumerate(sequence, start=0):
+                               n = start
+                               for elem in sequence:
+                                   yield n, elem
+                                   n += 1
+
+               ``eval``\ (\ *expression*\ [, *globals*\ [, *locals*\ ]])\ `¶ <#eval>`__
+                  The arguments are a string and optional globals and
+                  locals. If provided, *globals* must be a dictionary.
+                  If provided, *locals* can be any mapping object.
+
+                  The *expression* argument is parsed and evaluated as a
+                  Python expression (technically speaking, a condition
+                  list) using the *globals* and *locals* dictionaries as
+                  global and local namespace. If the *globals*
+                  dictionary is present and does not contain a value for
+                  the key ``__builtins__``, a reference to the
+                  dictionary of the built-in module
+                  ```builtins`` <https://docs.python.org/3/library/builtins.html#module-builtins>`__
+                  is inserted under that key before *expression* is
+                  parsed. That way you can control what builtins are
+                  available to the executed code by inserting your own
+                  ``__builtins__`` dictionary into *globals* before
+                  passing it to ```eval()`` <#eval>`__. If the *locals*
+                  dictionary is omitted it defaults to the *globals*
+                  dictionary. If both dictionaries are omitted, the
+                  expression is executed with the *globals* and *locals*
+                  in the environment where ```eval()`` <#eval>`__ is
+                  called. Note, *eval()* does not have access to the
+                  `nested
+                  scopes <https://docs.python.org/3/glossary.html#term-nested-scope>`__
+                  (non-locals) in the enclosing environment.
+
+                  The return value is the result of the evaluated
+                  expression. Syntax errors are reported as exceptions.
+                  Example:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> x = 1
+                           >>> eval('x+1')
+                           2
+
+                  This function can also be used to execute arbitrary
+                  code objects (such as those created by
+                  ```compile()`` <#compile>`__). In this case, pass a
+                  code object instead of a string. If the code object
+                  has been compiled with ``'exec'`` as the *mode*
+                  argument, ```eval()`` <#eval>`__'s return value will
+                  be ``None``.
+
+                  Hints: dynamic execution of statements is supported by
+                  the ```exec()`` <#exec>`__ function. The
+                  ```globals()`` <#globals>`__ and
+                  ```locals()`` <#locals>`__ functions return the
+                  current global and local dictionary, respectively,
+                  which may be useful to pass around for use by
+                  ```eval()`` <#eval>`__ or ```exec()`` <#exec>`__.
+
+                  If the given source is a string, then leading and
+                  trailing spaces and tabs are stripped.
+
+                  See
+                  ```ast.literal_eval()`` <https://docs.python.org/3/library/ast.html#ast.literal_eval>`__
+                  for a function that can safely evaluate strings with
+                  expressions containing only literals.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``exec`` with the code object as the argument. Code
+                  compilation events may also be raised.
+
+               ``exec``\ (\ *object*\ [, *globals*\ [, *locals*\ ]])\ `¶ <#exec>`__
+                  This function supports dynamic execution of Python
+                  code. *object* must be either a string or a code
+                  object. If it is a string, the string is parsed as a
+                  suite of Python statements which is then executed
+                  (unless a syntax error occurs). `1 <#id2>`__ If it is
+                  a code object, it is simply executed. In all cases,
+                  the code that’s executed is expected to be valid as
+                  file input (see the section `File
+                  input <https://docs.python.org/3/reference/toplevel_components.html#file-input>`__
+                  in the Reference Manual). Be aware that the
+                  ```nonlocal`` <https://docs.python.org/3/reference/simple_stmts.html#nonlocal>`__,
+                  ```yield`` <https://docs.python.org/3/reference/simple_stmts.html#yield>`__,
+                  and
+                  ```return`` <https://docs.python.org/3/reference/simple_stmts.html#return>`__
+                  statements may not be used outside of function
+                  definitions even within the context of code passed to
+                  the ```exec()`` <#exec>`__ function. The return value
+                  is ``None``.
+
+                  In all cases, if the optional parts are omitted, the
+                  code is executed in the current scope. If only
+                  *globals* is provided, it must be a dictionary (and
+                  not a subclass of dictionary), which will be used for
+                  both the global and the local variables. If *globals*
+                  and *locals* are given, they are used for the global
+                  and local variables, respectively. If provided,
+                  *locals* can be any mapping object. Remember that at
+                  the module level, globals and locals are the same
+                  dictionary. If exec gets two separate objects as
+                  *globals* and *locals*, the code will be executed as
+                  if it were embedded in a class definition.
+
+                  If the *globals* dictionary does not contain a value
+                  for the key ``__builtins__``, a reference to the
+                  dictionary of the built-in module
+                  ```builtins`` <https://docs.python.org/3/library/builtins.html#module-builtins>`__
+                  is inserted under that key. That way you can control
+                  what builtins are available to the executed code by
+                  inserting your own ``__builtins__`` dictionary into
+                  *globals* before passing it to ```exec()`` <#exec>`__.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``exec`` with the code object as the argument. Code
+                  compilation events may also be raised.
+
+                  .. admonition::
+
+                     Note
+
+                     The built-in functions ```globals()`` <#globals>`__
+                     and ```locals()`` <#locals>`__ return the current
+                     global and local dictionary, respectively, which
+                     may be useful to pass around for use as the second
+                     and third argument to ```exec()`` <#exec>`__.
+
+                  .. admonition::
+
+                     Note
+
+                     The default *locals* act as described for function
+                     ```locals()`` <#locals>`__ below: modifications to
+                     the default *locals* dictionary should not be
+                     attempted. Pass an explicit *locals* dictionary if
+                     you need to see effects of the code on *locals*
+                     after function ```exec()`` <#exec>`__ returns.
+
+               ``filter``\ (\ *function*, *iterable*\ )\ `¶ <#filter>`__
+                  Construct an iterator from those elements of
+                  *iterable* for which *function* returns true.
+                  *iterable* may be either a sequence, a container which
+                  supports iteration, or an iterator. If *function* is
+                  ``None``, the identity function is assumed, that is,
+                  all elements of *iterable* that are false are removed.
+
+                  Note that ``filter(function, iterable)`` is equivalent
+                  to the generator expression
+                  ``(item for item in iterable if function(item))`` if
+                  function is not ``None`` and
+                  ``(item for item in iterable if item)`` if function is
+                  ``None``.
+
+                  See
+                  ```itertools.filterfalse()`` <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`__
+                  for the complementary function that returns elements
+                  of *iterable* for which *function* returns false.
+
+               *class* ``float``\ ([\ *x*\ ])\ `¶ <#float>`__
+                  Return a floating point number constructed from a
+                  number or string *x*.
+
+                  If the argument is a string, it should contain a
+                  decimal number, optionally preceded by a sign, and
+                  optionally embedded in whitespace. The optional sign
+                  may be ``'+'`` or ``'-'``; a ``'+'`` sign has no
+                  effect on the value produced. The argument may also be
+                  a string representing a NaN (not-a-number), or
+                  positive or negative infinity. More precisely, the
+                  input must conform to the following grammar after
+                  leading and trailing whitespace characters are
+                  removed:
+
+                  ::
+
+                     sign           ::=  "+" | "-"
+                     infinity       ::=  "Infinity" | "inf"
+                     nan            ::=  "nan"
+                     numeric_value  ::=  floatnumber | infinity | nan
+                     numeric_string ::=  [sign] numeric_value
+
+                  Here ``floatnumber`` is the form of a Python
+                  floating-point literal, described in `Floating point
+                  literals <https://docs.python.org/3/reference/lexical_analysis.html#floating>`__.
+                  Case is not significant, so, for example, “inf”,
+                  “Inf”, “INFINITY”, and “iNfINity” are all acceptable
+                  spellings for positive infinity.
+
+                  Otherwise, if the argument is an integer or a floating
+                  point number, a floating point number with the same
+                  value (within Python’s floating point precision) is
+                  returned. If the argument is outside the range of a
+                  Python float, an
+                  ```OverflowError`` <https://docs.python.org/3/library/exceptions.html#OverflowError>`__
+                  will be raised.
+
+                  For a general Python object ``x``, ``float(x)``
+                  delegates to ``x.__float__()``. If ``__float__()`` is
+                  not defined then it falls back to ``__index__()``.
+
+                  If no argument is given, ``0.0`` is returned.
+
+                  Examples:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> float('+1.23')
+                           1.23
+                           >>> float('   -12345\n')
+                           -12345.0
+                           >>> float('1e-003')
+                           0.001
+                           >>> float('+1E6')
+                           1000000.0
+                           >>> float('-Infinity')
+                           -inf
+
+                  The float type is described in `Numeric Types — int,
+                  float,
+                  complex <https://docs.python.org/3/library/stdtypes.html#typesnumeric>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.6:Grouping digits with
+                     underscores as in code literals is allowed.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.7:\ *x* is now a
+                     positional-only parameter.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:Falls back to
+                     ``__index__()`` if ``__float__()`` is not defined.
+
+               ``format``\ (\ *value*\ [, *format_spec*\ ])\ `¶ <#format>`__
+                  Convert a *value* to a “formatted” representation, as
+                  controlled by *format_spec*. The interpretation of
+                  *format_spec* will depend on the type of the *value*
+                  argument; however, there is a standard formatting
+                  syntax that is used by most built-in types: `Format
+                  Specification
+                  Mini-Language <https://docs.python.org/3/library/string.html#formatspec>`__.
+
+                  The default *format_spec* is an empty string which
+                  usually gives the same effect as calling
+                  ```str(value)`` <https://docs.python.org/3/library/stdtypes.html#str>`__.
+
+                  A call to ``format(value, format_spec)`` is translated
+                  to ``type(value).__format__(value, format_spec)``
+                  which bypasses the instance dictionary when searching
+                  for the value’s ``__format__()`` method. A
+                  ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                  exception is raised if the method search reaches
+                  ```object`` <#object>`__ and the *format_spec* is
+                  non-empty, or if either the *format_spec* or the
+                  return value are not strings.
+
+                  .. container:: versionchanged
+
+                     Changed in version
+                     3.4:\ ``object().__format__(format_spec)`` raises
+                     ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                     if *format_spec* is not an empty string.
+
+               *class* ``frozenset``\ ([\ *iterable*\ ])
+                  Return a new
+                  ```frozenset`` <https://docs.python.org/3/library/stdtypes.html#frozenset>`__
+                  object, optionally with elements taken from
+                  *iterable*. ``frozenset`` is a built-in class. See
+                  ```frozenset`` <https://docs.python.org/3/library/stdtypes.html#frozenset>`__
+                  and `Set Types — set,
+                  frozenset <https://docs.python.org/3/library/stdtypes.html#types-set>`__
+                  for documentation about this class.
+
+                  For other containers see the built-in
+                  ```set`` <https://docs.python.org/3/library/stdtypes.html#set>`__,
+                  ```list`` <https://docs.python.org/3/library/stdtypes.html#list>`__,
+                  ```tuple`` <https://docs.python.org/3/library/stdtypes.html#tuple>`__,
+                  and
+                  ```dict`` <https://docs.python.org/3/library/stdtypes.html#dict>`__
+                  classes, as well as the
+                  ```collections`` <https://docs.python.org/3/library/collections.html#module-collections>`__
+                  module.
+
+               ``getattr``\ (\ *object*, *name*\ [, *default*\ ])\ `¶ <#getattr>`__
+                  Return the value of the named attribute of *object*.
+                  *name* must be a string. If the string is the name of
+                  one of the object’s attributes, the result is the
+                  value of that attribute. For example,
+                  ``getattr(x, 'foobar')`` is equivalent to
+                  ``x.foobar``. If the named attribute does not exist,
+                  *default* is returned if provided, otherwise
+                  ```AttributeError`` <https://docs.python.org/3/library/exceptions.html#AttributeError>`__
+                  is raised.
+
+                  .. admonition::
+
+                     Note
+
+                     Since `private name
+                     mangling <https://docs.python.org/3/reference/expressions.html#private-name-mangling>`__
+                     happens at compilation time, one must manually
+                     mangle a private attribute’s (attributes with two
+                     leading underscores) name in order to retrieve it
+                     with ```getattr()`` <#getattr>`__.
+
+               ``globals``\ ()\ `¶ <#globals>`__
+                  Return the dictionary implementing the current module
+                  namespace. For code within functions, this is set when
+                  the function is defined and remains the same
+                  regardless of where the function is called.
+
+               ``hasattr``\ (\ *object*, *name*\ )\ `¶ <#hasattr>`__
+                  The arguments are an object and a string. The result
+                  is ``True`` if the string is the name of one of the
+                  object’s attributes, ``False`` if not. (This is
+                  implemented by calling ``getattr(object, name)`` and
+                  seeing whether it raises an
+                  ```AttributeError`` <https://docs.python.org/3/library/exceptions.html#AttributeError>`__
+                  or not.)
+
+               ``hash``\ (\ *object*\ )\ `¶ <#hash>`__
+                  Return the hash value of the object (if it has one).
+                  Hash values are integers. They are used to quickly
+                  compare dictionary keys during a dictionary lookup.
+                  Numeric values that compare equal have the same hash
+                  value (even if they are of different types, as is the
+                  case for 1 and 1.0).
+
+                  .. admonition::
+
+                     Note
+
+                     For objects with custom ``__hash__()`` methods,
+                     note that ```hash()`` <#hash>`__ truncates the
+                     return value based on the bit width of the host
+                     machine. See ``__hash__()`` for details.
+
+               ``help``\ ([\ *object*\ ])\ `¶ <#help>`__
+                  Invoke the built-in help system. (This function is
+                  intended for interactive use.) If no argument is
+                  given, the interactive help system starts on the
+                  interpreter console. If the argument is a string, then
+                  the string is looked up as the name of a module,
+                  function, class, method, keyword, or documentation
+                  topic, and a help page is printed on the console. If
+                  the argument is any other kind of object, a help page
+                  on the object is generated.
+
+                  Note that if a slash(/) appears in the parameter list
+                  of a function when invoking ```help()`` <#help>`__, it
+                  means that the parameters prior to the slash are
+                  positional-only. For more info, see `the FAQ entry on
+                  positional-only
+                  parameters <https://docs.python.org/3/faq/programming.html#faq-positional-only-arguments>`__.
+
+                  This function is added to the built-in namespace by
+                  the
+                  ```site`` <https://docs.python.org/3/library/site.html#module-site>`__
+                  module.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.4:Changes to
+                     ```pydoc`` <https://docs.python.org/3/library/pydoc.html#module-pydoc>`__
+                     and
+                     ```inspect`` <https://docs.python.org/3/library/inspect.html#module-inspect>`__
+                     mean that the reported signatures for callables are
+                     now more comprehensive and consistent.
+
+               ``hex``\ (\ *x*\ )\ `¶ <#hex>`__
+                  Convert an integer number to a lowercase hexadecimal
+                  string prefixed with “0x”. If *x* is not a Python
+                  ```int`` <#int>`__ object, it has to define an
+                  ``__index__()`` method that returns an integer. Some
+                  examples:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> hex(255)
+                           '0xff'
+                           >>> hex(-42)
+                           '-0x2a'
+
+                  If you want to convert an integer number to an
+                  uppercase or lower hexadecimal string with prefix or
+                  not, you can use either of the following ways:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> '%#x' % 255, '%x' % 255, '%X' % 255
+                           ('0xff', 'ff', 'FF')
+                           >>> format(255, '#x'), format(255, 'x'), format(255, 'X')
+                           ('0xff', 'ff', 'FF')
+                           >>> f'{255:#x}', f'{255:x}', f'{255:X}'
+                           ('0xff', 'ff', 'FF')
+
+                  See also ```format()`` <#format>`__ for more
+                  information.
+
+                  See also ```int()`` <#int>`__ for converting a
+                  hexadecimal string to an integer using a base of 16.
+
+                  .. admonition::
+
+                     Note
+
+                     To obtain a hexadecimal string representation for a
+                     float, use the
+                     ```float.hex()`` <https://docs.python.org/3/library/stdtypes.html#float.hex>`__
+                     method.
+
+               ``id``\ (\ *object*\ )\ `¶ <#id>`__
+                  Return the “identity” of an object. This is an integer
+                  which is guaranteed to be unique and constant for this
+                  object during its lifetime. Two objects with
+                  non-overlapping lifetimes may have the same
+                  ```id()`` <#id>`__ value.
+
+                  .. container:: impl-detail compound
+
+                     **CPython implementation detail:** This is the
+                     address of the object in memory.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``builtins.id`` with argument ``id``.
+
+               ``input``\ ([\ *prompt*\ ])\ `¶ <#input>`__
+                  If the *prompt* argument is present, it is written to
+                  standard output without a trailing newline. The
+                  function then reads a line from input, converts it to
+                  a string (stripping a trailing newline), and returns
+                  that. When EOF is read,
+                  ```EOFError`` <https://docs.python.org/3/library/exceptions.html#EOFError>`__
+                  is raised. Example:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> s = input('--> ')  
+                           --> Monty Python's Flying Circus
+                           >>> s  
+                           "Monty Python's Flying Circus"
+
+                  If the
+                  ```readline`` <https://docs.python.org/3/library/readline.html#module-readline>`__
+                  module was loaded, then ```input()`` <#input>`__ will
+                  use it to provide elaborate line editing and history
+                  features.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``builtins.input`` with argument ``prompt`` before
+                  reading input
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``builtins.input/result`` with the result after
+                  successfully reading input.
+
+               *class* ``int``\ ([\ *x*\ ])\ `¶ <#int>`__
+               *class* ``int``\ (\ *x*, *base=10*\ )
+                  Return an integer object constructed from a number or
+                  string *x*, or return ``0`` if no arguments are given.
+                  If *x* defines ``__int__()``, ``int(x)`` returns
+                  ``x.__int__()``. If *x* defines ``__index__()``, it
+                  returns ``x.__index__()``. If *x* defines
+                  ``__trunc__()``, it returns ``x.__trunc__()``. For
+                  floating point numbers, this truncates towards zero.
+
+                  If *x* is not a number or if *base* is given, then *x*
+                  must be a string,
+                  ```bytes`` <https://docs.python.org/3/library/stdtypes.html#bytes>`__,
+                  or
+                  ```bytearray`` <https://docs.python.org/3/library/stdtypes.html#bytearray>`__
+                  instance representing an `integer
+                  literal <https://docs.python.org/3/reference/lexical_analysis.html#integers>`__
+                  in radix *base*. Optionally, the literal can be
+                  preceded by ``+`` or ``-`` (with no space in between)
+                  and surrounded by whitespace. A base-n literal
+                  consists of the digits 0 to n-1, with ``a`` to ``z``
+                  (or ``A`` to ``Z``) having values 10 to 35. The
+                  default *base* is 10. The allowed values are 0 and
+                  2–36. Base-2, -8, and -16 literals can be optionally
+                  prefixed with ``0b``/``0B``, ``0o``/``0O``, or
+                  ``0x``/``0X``, as with integer literals in code. Base
+                  0 means to interpret exactly as a code literal, so
+                  that the actual base is 2, 8, 10, or 16, and so that
+                  ``int('010', 0)`` is not legal, while ``int('010')``
+                  is, as well as ``int('010', 8)``.
+
+                  The integer type is described in `Numeric Types — int,
+                  float,
+                  complex <https://docs.python.org/3/library/stdtypes.html#typesnumeric>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.4:If *base* is not an instance
+                     of ```int`` <#int>`__ and the *base* object has a
+                     ```base.__index__`` <https://docs.python.org/3/reference/datamodel.html#object.__index__>`__
+                     method, that method is called to obtain an integer
+                     for the base. Previous versions used
+                     ```base.__int__`` <https://docs.python.org/3/reference/datamodel.html#object.__int__>`__
+                     instead of
+                     ```base.__index__`` <https://docs.python.org/3/reference/datamodel.html#object.__index__>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.6:Grouping digits with
+                     underscores as in code literals is allowed.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.7:\ *x* is now a
+                     positional-only parameter.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:Falls back to
+                     ``__index__()`` if ``__int__()`` is not defined.
+
+               ``isinstance``\ (\ *object*, *classinfo*\ )\ `¶ <#isinstance>`__
+                  Return ``True`` if the *object* argument is an
+                  instance of the *classinfo* argument, or of a (direct,
+                  indirect, or
+                  `virtual <https://docs.python.org/3/glossary.html#term-abstract-base-class>`__)
+                  subclass thereof. If *object* is not an object of the
+                  given type, the function always returns ``False``. If
+                  *classinfo* is a tuple of type objects (or
+                  recursively, other such tuples) or a `Union
+                  Type <https://docs.python.org/3/library/stdtypes.html#types-union>`__
+                  of multiple types, return ``True`` if *object* is an
+                  instance of any of the types. If *classinfo* is not a
+                  type or tuple of types and such tuples, a
+                  ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                  exception is raised.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.10:\ *classinfo* can be a
+                     `Union
+                     Type <https://docs.python.org/3/library/stdtypes.html#types-union>`__.
+
+               ``issubclass``\ (\ *class*, *classinfo*\ )\ `¶ <#issubclass>`__
+                  Return ``True`` if *class* is a subclass (direct,
+                  indirect, or
+                  `virtual <https://docs.python.org/3/glossary.html#term-abstract-base-class>`__)
+                  of *classinfo*. A class is considered a subclass of
+                  itself. *classinfo* may be a tuple of class objects
+                  (or recursively, other such tuples) or a `Union
+                  Type <https://docs.python.org/3/library/stdtypes.html#types-union>`__,
+                  in which case return ``True`` if *class* is a subclass
+                  of any entry in *classinfo*. In any other case, a
+                  ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                  exception is raised.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.10:\ *classinfo* can be a
+                     `Union
+                     Type <https://docs.python.org/3/library/stdtypes.html#types-union>`__.
+
+               ``iter``\ (\ *object*\ [, *sentinel*\ ])\ `¶ <#iter>`__
+                  Return an
+                  `iterator <https://docs.python.org/3/glossary.html#term-iterator>`__
+                  object. The first argument is interpreted very
+                  differently depending on the presence of the second
+                  argument. Without a second argument, *object* must be
+                  a collection object which supports the
+                  `iterable <https://docs.python.org/3/glossary.html#term-iterable>`__
+                  protocol (the ``__iter__()`` method), or it must
+                  support the sequence protocol (the ``__getitem__()``
+                  method with integer arguments starting at ``0``). If
+                  it does not support either of those protocols,
+                  ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                  is raised. If the second argument, *sentinel*, is
+                  given, then *object* must be a callable object. The
+                  iterator created in this case will call *object* with
+                  no arguments for each call to its
+                  ```__next__()`` <https://docs.python.org/3/library/stdtypes.html#iterator.__next__>`__
+                  method; if the value returned is equal to *sentinel*,
+                  ```StopIteration`` <https://docs.python.org/3/library/exceptions.html#StopIteration>`__
+                  will be raised, otherwise the value will be returned.
+
+                  See also `Iterator
+                  Types <https://docs.python.org/3/library/stdtypes.html#typeiter>`__.
+
+                  One useful application of the second form of
+                  ```iter()`` <#iter>`__ is to build a block-reader. For
+                  example, reading fixed-width blocks from a binary
+                  database file until the end of file is reached:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           from functools import partial
+                           with open('mydata.db', 'rb') as f:
+                               for block in iter(partial(f.read, 64), b''):
+                                   process_block(block)
+
+               ``len``\ (\ *s*\ )\ `¶ <#len>`__
+                  Return the length (the number of items) of an object.
+                  The argument may be a sequence (such as a string,
+                  bytes, tuple, list, or range) or a collection (such as
+                  a dictionary, set, or frozen set).
+
+                  .. container:: impl-detail compound
+
+                     **CPython implementation detail:** ``len`` raises
+                     ```OverflowError`` <https://docs.python.org/3/library/exceptions.html#OverflowError>`__
+                     on lengths larger than
+                     ```sys.maxsize`` <https://docs.python.org/3/library/sys.html#sys.maxsize>`__,
+                     such as
+                     ```range(2 ** 100)`` <https://docs.python.org/3/library/stdtypes.html#range>`__.
+
+               *class* ``list``\ ([\ *iterable*\ ])
+                  Rather than being a function,
+                  ```list`` <https://docs.python.org/3/library/stdtypes.html#list>`__
+                  is actually a mutable sequence type, as documented in
+                  `Lists <https://docs.python.org/3/library/stdtypes.html#typesseq-list>`__
+                  and `Sequence Types — list, tuple,
+                  range <https://docs.python.org/3/library/stdtypes.html#typesseq>`__.
+
+               ``locals``\ ()\ `¶ <#locals>`__
+                  Update and return a dictionary representing the
+                  current local symbol table. Free variables are
+                  returned by ```locals()`` <#locals>`__ when it is
+                  called in function blocks, but not in class blocks.
+                  Note that at the module level,
+                  ```locals()`` <#locals>`__ and
+                  ```globals()`` <#globals>`__ are the same dictionary.
+
+                  .. admonition::
+
+                     Note
+
+                     The contents of this dictionary should not be
+                     modified; changes may not affect the values of
+                     local and free variables used by the interpreter.
+
+               ``map``\ (\ *function*, *iterable*, *...*\ )\ `¶ <#map>`__
+                  Return an iterator that applies *function* to every
+                  item of *iterable*, yielding the results. If
+                  additional *iterable* arguments are passed, *function*
+                  must take that many arguments and is applied to the
+                  items from all iterables in parallel. With multiple
+                  iterables, the iterator stops when the shortest
+                  iterable is exhausted. For cases where the function
+                  inputs are already arranged into argument tuples, see
+                  ```itertools.starmap()`` <https://docs.python.org/3/library/itertools.html#itertools.starmap>`__.
+
+               ``max``\ (\ *iterable*, *\**\ [, *key*, *default*\ ])\ `¶ <#max>`__
+               ``max``\ (\ *arg1*, *arg2*, *\*args*\ [, *key*\ ])
+                  Return the largest item in an iterable or the largest
+                  of two or more arguments.
+
+                  If one positional argument is provided, it should be
+                  an
+                  `iterable <https://docs.python.org/3/glossary.html#term-iterable>`__.
+                  The largest item in the iterable is returned. If two
+                  or more positional arguments are provided, the largest
+                  of the positional arguments is returned.
+
+                  There are two optional keyword-only arguments. The
+                  *key* argument specifies a one-argument ordering
+                  function like that used for
+                  ```list.sort()`` <https://docs.python.org/3/library/stdtypes.html#list.sort>`__.
+                  The *default* argument specifies an object to return
+                  if the provided iterable is empty. If the iterable is
+                  empty and *default* is not provided, a
+                  ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                  is raised.
+
+                  If multiple items are maximal, the function returns
+                  the first one encountered. This is consistent with
+                  other sort-stability preserving tools such as
+                  ``sorted(iterable, key=keyfunc, reverse=True)[0]`` and
+                  ``heapq.nlargest(1, iterable, key=keyfunc)``.
+
+                  .. container:: versionadded
+
+                     New in version 3.4:The *default* keyword-only
+                     argument.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:The *key* can be ``None``.
+
+               *class* ``memoryview``\ (\ *object*\ )
+                  Return a “memory view” object created from the given
+                  argument. See `Memory
+                  Views <https://docs.python.org/3/library/stdtypes.html#typememoryview>`__
+                  for more information.
+
+               ``min``\ (\ *iterable*, *\**\ [, *key*, *default*\ ])\ `¶ <#min>`__
+               ``min``\ (\ *arg1*, *arg2*, *\*args*\ [, *key*\ ])
+                  Return the smallest item in an iterable or the
+                  smallest of two or more arguments.
+
+                  If one positional argument is provided, it should be
+                  an
+                  `iterable <https://docs.python.org/3/glossary.html#term-iterable>`__.
+                  The smallest item in the iterable is returned. If two
+                  or more positional arguments are provided, the
+                  smallest of the positional arguments is returned.
+
+                  There are two optional keyword-only arguments. The
+                  *key* argument specifies a one-argument ordering
+                  function like that used for
+                  ```list.sort()`` <https://docs.python.org/3/library/stdtypes.html#list.sort>`__.
+                  The *default* argument specifies an object to return
+                  if the provided iterable is empty. If the iterable is
+                  empty and *default* is not provided, a
+                  ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                  is raised.
+
+                  If multiple items are minimal, the function returns
+                  the first one encountered. This is consistent with
+                  other sort-stability preserving tools such as
+                  ``sorted(iterable, key=keyfunc)[0]`` and
+                  ``heapq.nsmallest(1, iterable, key=keyfunc)``.
+
+                  .. container:: versionadded
+
+                     New in version 3.4:The *default* keyword-only
+                     argument.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:The *key* can be ``None``.
+
+               ``next``\ (\ *iterator*\ [, *default*\ ])\ `¶ <#next>`__
+                  Retrieve the next item from the
+                  `iterator <https://docs.python.org/3/glossary.html#term-iterator>`__
+                  by calling its
+                  ```__next__()`` <https://docs.python.org/3/library/stdtypes.html#iterator.__next__>`__
+                  method. If *default* is given, it is returned if the
+                  iterator is exhausted, otherwise
+                  ```StopIteration`` <https://docs.python.org/3/library/exceptions.html#StopIteration>`__
+                  is raised.
+
+               *class* ``object``\ `¶ <#object>`__
+                  Return a new featureless object.
+                  ```object`` <#object>`__ is a base for all classes. It
+                  has methods that are common to all instances of Python
+                  classes. This function does not accept any arguments.
+
+                  .. admonition::
+
+                     Note
+
+                     ```object`` <#object>`__ does *not* have a
+                     ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__,
+                     so you can’t assign arbitrary attributes to an
+                     instance of the ```object`` <#object>`__ class.
+
+               ``oct``\ (\ *x*\ )\ `¶ <#oct>`__
+                  Convert an integer number to an octal string prefixed
+                  with “0o”. The result is a valid Python expression. If
+                  *x* is not a Python ```int`` <#int>`__ object, it has
+                  to define an ``__index__()`` method that returns an
+                  integer. For example:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> oct(8)
+                           '0o10'
+                           >>> oct(-56)
+                           '-0o70'
+
+                  If you want to convert an integer number to an octal
+                  string either with the prefix “0o” or not, you can use
+                  either of the following ways.
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> '%#o' % 10, '%o' % 10
+                           ('0o12', '12')
+                           >>> format(10, '#o'), format(10, 'o')
+                           ('0o12', '12')
+                           >>> f'{10:#o}', f'{10:o}'
+                           ('0o12', '12')
+
+                  See also ```format()`` <#format>`__ for more
+                  information.
+
+                     .. container::
+
+               ``open``\ (\ *file*, *mode='r'*, *buffering=- 1*, *encoding=None*, *errors=None*, *newline=None*, *closefd=True*, *opener=None*\ )\ `¶ <#open>`__
+                  Open *file* and return a corresponding `file
+                  object <https://docs.python.org/3/glossary.html#term-file-object>`__.
+                  If the file cannot be opened, an
+                  ```OSError`` <https://docs.python.org/3/library/exceptions.html#OSError>`__
+                  is raised. See `Reading and Writing
+                  Files <https://docs.python.org/3/tutorial/inputoutput.html#tut-files>`__
+                  for more examples of how to use this function.
+
+                  *file* is a `path-like
+                  object <https://docs.python.org/3/glossary.html#term-path-like-object>`__
+                  giving the pathname (absolute or relative to the
+                  current working directory) of the file to be opened or
+                  an integer file descriptor of the file to be wrapped.
+                  (If a file descriptor is given, it is closed when the
+                  returned I/O object is closed unless *closefd* is set
+                  to ``False``.)
+
+                  *mode* is an optional string that specifies the mode
+                  in which the file is opened. It defaults to ``'r'``
+                  which means open for reading in text mode. Other
+                  common values are ``'w'`` for writing (truncating the
+                  file if it already exists), ``'x'`` for exclusive
+                  creation, and ``'a'`` for appending (which on *some*
+                  Unix systems, means that *all* writes append to the
+                  end of the file regardless of the current seek
+                  position). In text mode, if *encoding* is not
+                  specified the encoding used is platform-dependent:
+                  ``locale.getpreferredencoding(False)`` is called to
+                  get the current locale encoding. (For reading and
+                  writing raw bytes use binary mode and leave *encoding*
+                  unspecified.) The available modes are:
+
+                  .. container:: responsive-table__container
+
+                     +--------+--------------------------------------------------------------+
+                     | Cha    | Meaning                                                      |
+                     | racter |                                                              |
+                     +========+==============================================================+
+                     | `      | open for reading (default)                                   |
+                     | `'r'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+                     | `      | open for writing, truncating the file first                  |
+                     | `'w'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+                     | `      | open for exclusive creation, failing if the file already     |
+                     | `'x'`` | exists                                                       |
+                     +--------+--------------------------------------------------------------+
+                     | `      | open for writing, appending to the end of file if it exists  |
+                     | `'a'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+                     | `      | binary mode                                                  |
+                     | `'b'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+                     | `      | text mode (default)                                          |
+                     | `'t'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+                     | `      | open for updating (reading and writing)                      |
+                     | `'+'`` |                                                              |
+                     +--------+--------------------------------------------------------------+
+
+                  The default mode is ``'r'`` (open for reading text, a
+                  synonym of ``'rt'``). Modes ``'w+'`` and ``'w+b'``
+                  open and truncate the file. Modes ``'r+'`` and
+                  ``'r+b'`` open the file with no truncation.
+
+                  As mentioned in the
+                  `Overview <https://docs.python.org/3/library/io.html#io-overview>`__,
+                  Python distinguishes between binary and text I/O.
+                  Files opened in binary mode (including ``'b'`` in the
+                  *mode* argument) return contents as
+                  ```bytes`` <https://docs.python.org/3/library/stdtypes.html#bytes>`__
+                  objects without any decoding. In text mode (the
+                  default, or when ``'t'`` is included in the *mode*
+                  argument), the contents of the file are returned as
+                  ```str`` <https://docs.python.org/3/library/stdtypes.html#str>`__,
+                  the bytes having been first decoded using a
+                  platform-dependent encoding or using the specified
+                  *encoding* if given.
+
+                  There is an additional mode character permitted,
+                  ``'U'``, which no longer has any effect, and is
+                  considered deprecated. It previously enabled
+                  `universal
+                  newlines <https://docs.python.org/3/glossary.html#term-universal-newlines>`__
+                  in text mode, which became the default behavior in
+                  Python 3.0. Refer to the documentation of the
+                  `newline <#open-newline-parameter>`__ parameter for
+                  further details.
+
+                  .. admonition::
+
+                     Note
+
+                     Python doesn’t depend on the underlying operating
+                     system’s notion of text files; all the processing
+                     is done by Python itself, and is therefore
+                     platform-independent.
+
+                  *buffering* is an optional integer used to set the
+                  buffering policy. Pass 0 to switch buffering off (only
+                  allowed in binary mode), 1 to select line buffering
+                  (only usable in text mode), and an integer > 1 to
+                  indicate the size in bytes of a fixed-size chunk
+                  buffer. Note that specifying a buffer size this way
+                  applies for binary buffered I/O, but ``TextIOWrapper``
+                  (i.e., files opened with ``mode='r+'``) would have
+                  another buffering. To disable buffering in
+                  ``TextIOWrapper``, consider using the
+                  ``write_through`` flag for
+                  ```io.TextIOWrapper.reconfigure()`` <https://docs.python.org/3/library/io.html#io.TextIOWrapper.reconfigure>`__.
+                  When no *buffering* argument is given, the default
+                  buffering policy works as follows:
+
+                  -  Binary files are buffered in fixed-size chunks; the
+                     size of the buffer is chosen using a heuristic
+                     trying to determine the underlying device’s “block
+                     size” and falling back on
+                     ```io.DEFAULT_BUFFER_SIZE`` <https://docs.python.org/3/library/io.html#io.DEFAULT_BUFFER_SIZE>`__.
+                     On many systems, the buffer will typically be 4096
+                     or 8192 bytes long.
+
+                  -  “Interactive” text files (files for which
+                     ```isatty()`` <https://docs.python.org/3/library/io.html#io.IOBase.isatty>`__
+                     returns ``True``) use line buffering. Other text
+                     files use the policy described above for binary
+                     files.
+
+                  *encoding* is the name of the encoding used to decode
+                  or encode the file. This should only be used in text
+                  mode. The default encoding is platform dependent
+                  (whatever
+                  ```locale.getpreferredencoding()`` <https://docs.python.org/3/library/locale.html#locale.getpreferredencoding>`__
+                  returns), but any `text
+                  encoding <https://docs.python.org/3/glossary.html#term-text-encoding>`__
+                  supported by Python can be used. See the
+                  ```codecs`` <https://docs.python.org/3/library/codecs.html#module-codecs>`__
+                  module for the list of supported encodings.
+
+                  *errors* is an optional string that specifies how
+                  encoding and decoding errors are to be handled—this
+                  cannot be used in binary mode. A variety of standard
+                  error handlers are available (listed under `Error
+                  Handlers <https://docs.python.org/3/library/codecs.html#error-handlers>`__),
+                  though any error handling name that has been
+                  registered with
+                  ```codecs.register_error()`` <https://docs.python.org/3/library/codecs.html#codecs.register_error>`__
+                  is also valid. The standard names include:
+
+                  -  ``'strict'`` to raise a
+                     ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                     exception if there is an encoding error. The
+                     default value of ``None`` has the same effect.
+
+                  -  ``'ignore'`` ignores errors. Note that ignoring
+                     encoding errors can lead to data loss.
+
+                  -  ``'replace'`` causes a replacement marker (such as
+                     ``'?'``) to be inserted where there is malformed
+                     data.
+
+                  -  ``'surrogateescape'`` will represent any incorrect
+                     bytes as low surrogate code units ranging from
+                     U+DC80 to U+DCFF. These surrogate code units will
+                     then be turned back into the same bytes when the
+                     ``surrogateescape`` error handler is used when
+                     writing data. This is useful for processing files
+                     in an unknown encoding.
+
+                  -  ``'xmlcharrefreplace'`` is only supported when
+                     writing to a file. Characters not supported by the
+                     encoding are replaced with the appropriate XML
+                     character reference ``&#nnn;``.
+
+                  -  ``'backslashreplace'`` replaces malformed data by
+                     Python’s backslashed escape sequences.
+
+                  -  ``'namereplace'`` (also only supported when
+                     writing) replaces unsupported characters with
+                     ``\N{...}`` escape sequences.
+
+                  *newline* controls how `universal
+                  newlines <https://docs.python.org/3/glossary.html#term-universal-newlines>`__
+                  mode works (it only applies to text mode). It can be
+                  ``None``, ``''``, ``'\n'``, ``'\r'``, and ``'\r\n'``.
+                  It works as follows:
+
+                  -  When reading input from the stream, if *newline* is
+                     ``None``, universal newlines mode is enabled. Lines
+                     in the input can end in ``'\n'``, ``'\r'``, or
+                     ``'\r\n'``, and these are translated into ``'\n'``
+                     before being returned to the caller. If it is
+                     ``''``, universal newlines mode is enabled, but
+                     line endings are returned to the caller
+                     untranslated. If it has any of the other legal
+                     values, input lines are only terminated by the
+                     given string, and the line ending is returned to
+                     the caller untranslated.
+
+                  -  When writing output to the stream, if *newline* is
+                     ``None``, any ``'\n'`` characters written are
+                     translated to the system default line separator,
+                     ```os.linesep`` <https://docs.python.org/3/library/os.html#os.linesep>`__.
+                     If *newline* is ``''`` or ``'\n'``, no translation
+                     takes place. If *newline* is any of the other legal
+                     values, any ``'\n'`` characters written are
+                     translated to the given string.
+
+                  If *closefd* is ``False`` and a file descriptor rather
+                  than a filename was given, the underlying file
+                  descriptor will be kept open when the file is closed.
+                  If a filename is given *closefd* must be ``True`` (the
+                  default); otherwise, an error will be raised.
+
+                  A custom opener can be used by passing a callable as
+                  *opener*. The underlying file descriptor for the file
+                  object is then obtained by calling *opener* with
+                  (*file*, *flags*). *opener* must return an open file
+                  descriptor (passing
+                  ```os.open`` <https://docs.python.org/3/library/os.html#os.open>`__
+                  as *opener* results in functionality similar to
+                  passing ``None``).
+
+                  The newly created file is
+                  `non-inheritable <https://docs.python.org/3/library/os.html#fd-inheritance>`__.
+
+                  The following example uses the
+                  `dir_fd <https://docs.python.org/3/library/os.html#dir-fd>`__
+                  parameter of the
+                  ```os.open()`` <https://docs.python.org/3/library/os.html#os.open>`__
+                  function to open a file relative to a given directory:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> import os
+                           >>> dir_fd = os.open('somedir', os.O_RDONLY)
+                           >>> def opener(path, flags):
+                           ...     return os.open(path, flags, dir_fd=dir_fd)
+                           ...
+                           >>> with open('spamspam.txt', 'w', opener=opener) as f:
+                           ...     print('This will be written to somedir/spamspam.txt', file=f)
+                           ...
+                           >>> os.close(dir_fd)  # don't leak a file descriptor
+
+                  The type of `file
+                  object <https://docs.python.org/3/glossary.html#term-file-object>`__
+                  returned by the ```open()`` <#open>`__ function
+                  depends on the mode. When ```open()`` <#open>`__ is
+                  used to open a file in a text mode (``'w'``, ``'r'``,
+                  ``'wt'``, ``'rt'``, etc.), it returns a subclass of
+                  ```io.TextIOBase`` <https://docs.python.org/3/library/io.html#io.TextIOBase>`__
+                  (specifically
+                  ```io.TextIOWrapper`` <https://docs.python.org/3/library/io.html#io.TextIOWrapper>`__).
+                  When used to open a file in a binary mode with
+                  buffering, the returned class is a subclass of
+                  ```io.BufferedIOBase`` <https://docs.python.org/3/library/io.html#io.BufferedIOBase>`__.
+                  The exact class varies: in read binary mode, it
+                  returns an
+                  ```io.BufferedReader`` <https://docs.python.org/3/library/io.html#io.BufferedReader>`__;
+                  in write binary and append binary modes, it returns an
+                  ```io.BufferedWriter`` <https://docs.python.org/3/library/io.html#io.BufferedWriter>`__,
+                  and in read/write mode, it returns an
+                  ```io.BufferedRandom`` <https://docs.python.org/3/library/io.html#io.BufferedRandom>`__.
+                  When buffering is disabled, the raw stream, a subclass
+                  of
+                  ```io.RawIOBase`` <https://docs.python.org/3/library/io.html#io.RawIOBase>`__,
+                  ```io.FileIO`` <https://docs.python.org/3/library/io.html#io.FileIO>`__,
+                  is returned.
+
+                  See also the file handling modules, such as
+                  ```fileinput`` <https://docs.python.org/3/library/fileinput.html#module-fileinput>`__,
+                  ```io`` <https://docs.python.org/3/library/io.html#module-io>`__
+                  (where ```open()`` <#open>`__ is declared),
+                  ```os`` <https://docs.python.org/3/library/os.html#module-os>`__,
+                  ```os.path`` <https://docs.python.org/3/library/os.path.html#module-os.path>`__,
+                  ```tempfile`` <https://docs.python.org/3/library/tempfile.html#module-tempfile>`__,
+                  and
+                  ```shutil`` <https://docs.python.org/3/library/shutil.html#module-shutil>`__.
+
+                  Raises an `auditing
+                  event <https://docs.python.org/3/library/sys.html#auditing>`__
+                  ``open`` with arguments ``file``, ``mode``, ``flags``.
+
+                  The ``mode`` and ``flags`` arguments may have been
+                  modified or inferred from the original call.
+
+                  .. container:: versionchanged
+
+                        .. container::
+
+                           Changed in version 3.3:
+
+                           -  The *opener* parameter was added.
+
+                           -  The ``'x'`` mode was added.
+
+                           -  ```IOError`` <https://docs.python.org/3/library/exceptions.html#IOError>`__
+                              used to be raised, it is now an alias of
+                              ```OSError`` <https://docs.python.org/3/library/exceptions.html#OSError>`__.
+
+                           -  ```FileExistsError`` <https://docs.python.org/3/library/exceptions.html#FileExistsError>`__
+                              is now raised if the file opened in
+                              exclusive creation mode (``'x'``) already
+                              exists.
+
+                  .. container:: versionchanged
+
+                        .. container::
+
+                           Changed in version 3.4:
+
+                           -  The file is now non-inheritable.
+
+                  .. container:: deprecated-removed
+
+                     Deprecated since version 3.4, removed in version
+                     3.10:The ``'U'`` mode.
+
+                  .. container:: versionchanged
+
+                        .. container::
+
+                           Changed in version 3.5:
+
+                           -  If the system call is interrupted and the
+                              signal handler does not raise an
+                              exception, the function now retries the
+                              system call instead of raising an
+                              ```InterruptedError`` <https://docs.python.org/3/library/exceptions.html#InterruptedError>`__
+                              exception (see `PEP
+                              475 <https://www.python.org/dev/peps/pep-0475>`__
+                              for the rationale).
+
+                           -  The ``'namereplace'`` error handler was
+                              added.
+
+                  .. container:: versionchanged
+
+                        .. container::
+
+                           Changed in version 3.6:
+
+                           -  Support added to accept objects
+                              implementing
+                              ```os.PathLike`` <https://docs.python.org/3/library/os.html#os.PathLike>`__.
+
+                           -  On Windows, opening a console buffer may
+                              return a subclass of
+                              ```io.RawIOBase`` <https://docs.python.org/3/library/io.html#io.RawIOBase>`__
+                              other than
+                              ```io.FileIO`` <https://docs.python.org/3/library/io.html#io.FileIO>`__.
+
+               ``ord``\ (\ *c*\ )\ `¶ <#ord>`__
+                  Given a string representing one Unicode character,
+                  return an integer representing the Unicode code point
+                  of that character. For example, ``ord('a')`` returns
+                  the integer ``97`` and ``ord('€')`` (Euro sign)
+                  returns ``8364``. This is the inverse of
+                  ```chr()`` <#chr>`__.
+
+               ``pow``\ (\ *base*, *exp*\ [, *mod*\ ])\ `¶ <#pow>`__
+                  Return *base* to the power *exp*; if *mod* is present,
+                  return *base* to the power *exp*, modulo *mod*
+                  (computed more efficiently than
+                  ``pow(base, exp) % mod``). The two-argument form
+                  ``pow(base, exp)`` is equivalent to using the power
+                  operator: ``base**exp``.
+
+                  The arguments must have numeric types. With mixed
+                  operand types, the coercion rules for binary
+                  arithmetic operators apply. For ```int`` <#int>`__
+                  operands, the result has the same type as the operands
+                  (after coercion) unless the second argument is
+                  negative; in that case, all arguments are converted to
+                  float and a float result is delivered. For example,
+                  ``pow(10, 2)`` returns ``100``, but ``pow(10, -2)``
+                  returns ``0.01``. For a negative base of type
+                  ```int`` <#int>`__ or ```float`` <#float>`__ and a
+                  non-integral exponent, a complex result is delivered.
+                  For example, ``pow(-9, 0.5)`` returns a value close to
+                  ``3j``.
+
+                  For ```int`` <#int>`__ operands *base* and *exp*, if
+                  *mod* is present, *mod* must also be of integer type
+                  and *mod* must be nonzero. If *mod* is present and
+                  *exp* is negative, *base* must be relatively prime to
+                  *mod*. In that case, ``pow(inv_base, -exp, mod)`` is
+                  returned, where *inv_base* is an inverse to *base*
+                  modulo *mod*.
+
+                  Here’s an example of computing an inverse for ``38``
+                  modulo ``97``:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> pow(38, -1, mod=97)
+                           23
+                           >>> 23 * 38 % 97 == 1
+                           True
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:For ```int`` <#int>`__
+                     operands, the three-argument form of ``pow`` now
+                     allows the second argument to be negative,
+                     permitting computation of modular inverses.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:Allow keyword arguments.
+                     Formerly, only positional arguments were supported.
+
+               ``print``\ (\ *\*objects*, *sep=' '*, *end='\n'*, *file=sys.stdout*, *flush=False*\ )\ `¶ <#print>`__
+                  Print *objects* to the text stream *file*, separated
+                  by *sep* and followed by *end*. *sep*, *end*, *file*,
+                  and *flush*, if present, must be given as keyword
+                  arguments.
+
+                  All non-keyword arguments are converted to strings
+                  like
+                  ```str()`` <https://docs.python.org/3/library/stdtypes.html#str>`__
+                  does and written to the stream, separated by *sep* and
+                  followed by *end*. Both *sep* and *end* must be
+                  strings; they can also be ``None``, which means to use
+                  the default values. If no *objects* are given,
+                  ```print()`` <#print>`__ will just write *end*.
+
+                  The *file* argument must be an object with a
+                  ``write(string)`` method; if it is not present or
+                  ``None``,
+                  ```sys.stdout`` <https://docs.python.org/3/library/sys.html#sys.stdout>`__
+                  will be used. Since printed arguments are converted to
+                  text strings, ```print()`` <#print>`__ cannot be used
+                  with binary mode file objects. For these, use
+                  ``file.write(...)`` instead.
+
+                  Whether the output is buffered is usually determined
+                  by *file*, but if the *flush* keyword argument is
+                  true, the stream is forcibly flushed.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.3:Added the *flush* keyword
+                     argument.
+
+               *class* ``property``\ (\ *fget=None*, *fset=None*, *fdel=None*, *doc=None*\ )\ `¶ <#property>`__
+                  Return a property attribute.
+
+                  *fget* is a function for getting an attribute value.
+                  *fset* is a function for setting an attribute value.
+                  *fdel* is a function for deleting an attribute value.
+                  And *doc* creates a docstring for the attribute.
+
+                  A typical use is to define a managed attribute ``x``:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class C:
+                               def __init__(self):
+                                   self._x = None
+
+                               def getx(self):
+                                   return self._x
+
+                               def setx(self, value):
+                                   self._x = value
+
+                               def delx(self):
+                                   del self._x
+
+                               x = property(getx, setx, delx, "I'm the 'x' property.")
+
+                  If *c* is an instance of *C*, ``c.x`` will invoke the
+                  getter, ``c.x = value`` will invoke the setter, and
+                  ``del c.x`` the deleter.
+
+                  If given, *doc* will be the docstring of the property
+                  attribute. Otherwise, the property will copy
+                  *fget*\ ’s docstring (if it exists). This makes it
+                  possible to create read-only properties easily using
+                  ```property()`` <#property>`__ as a
+                  `decorator <https://docs.python.org/3/glossary.html#term-decorator>`__:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class Parrot:
+                               def __init__(self):
+                                   self._voltage = 100000
+
+                               @property
+                               def voltage(self):
+                                   """Get the current voltage."""
+                                   return self._voltage
+
+                  The ``@property`` decorator turns the ``voltage()``
+                  method into a “getter” for a read-only attribute with
+                  the same name, and it sets the docstring for *voltage*
+                  to “Get the current voltage.”
+
+                  A property object has ``getter``, ``setter``, and
+                  ``deleter`` methods usable as decorators that create a
+                  copy of the property with the corresponding accessor
+                  function set to the decorated function. This is best
+                  explained with an example:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class C:
+                               def __init__(self):
+                                   self._x = None
+
+                               @property
+                               def x(self):
+                                   """I'm the 'x' property."""
+                                   return self._x
+
+                               @x.setter
+                               def x(self, value):
+                                   self._x = value
+
+                               @x.deleter
+                               def x(self):
+                                   del self._x
+
+                  This code is exactly equivalent to the first example.
+                  Be sure to give the additional functions the same name
+                  as the original property (``x`` in this case.)
+
+                  The returned property object also has the attributes
+                  ``fget``, ``fset``, and ``fdel`` corresponding to the
+                  constructor arguments.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.5:The docstrings of property
+                     objects are now writeable.
+
+               *class* ``range``\ (\ *stop*\ )
+               *class* ``range``\ (\ *start*, *stop*\ [, *step*\ ])
+                  Rather than being a function,
+                  ```range`` <https://docs.python.org/3/library/stdtypes.html#range>`__
+                  is actually an immutable sequence type, as documented
+                  in
+                  `Ranges <https://docs.python.org/3/library/stdtypes.html#typesseq-range>`__
+                  and `Sequence Types — list, tuple,
+                  range <https://docs.python.org/3/library/stdtypes.html#typesseq>`__.
+
+               ``repr``\ (\ *object*\ )\ `¶ <#repr>`__
+                  Return a string containing a printable representation
+                  of an object. For many types, this function makes an
+                  attempt to return a string that would yield an object
+                  with the same value when passed to
+                  ```eval()`` <#eval>`__; otherwise, the representation
+                  is a string enclosed in angle brackets that contains
+                  the name of the type of the object together with
+                  additional information often including the name and
+                  address of the object. A class can control what this
+                  function returns for its instances by defining a
+                  ``__repr__()`` method.
+
+               ``reversed``\ (\ *seq*\ )\ `¶ <#reversed>`__
+                  Return a reverse
+                  `iterator <https://docs.python.org/3/glossary.html#term-iterator>`__.
+                  *seq* must be an object which has a ``__reversed__()``
+                  method or supports the sequence protocol (the
+                  ``__len__()`` method and the ``__getitem__()`` method
+                  with integer arguments starting at ``0``).
+
+               ``round``\ (\ *number*\ [, *ndigits*\ ])\ `¶ <#round>`__
+                  Return *number* rounded to *ndigits* precision after
+                  the decimal point. If *ndigits* is omitted or is
+                  ``None``, it returns the nearest integer to its input.
+
+                  For the built-in types supporting
+                  ```round()`` <#round>`__, values are rounded to the
+                  closest multiple of 10 to the power minus *ndigits*;
+                  if two multiples are equally close, rounding is done
+                  toward the even choice (so, for example, both
+                  ``round(0.5)`` and ``round(-0.5)`` are ``0``, and
+                  ``round(1.5)`` is ``2``). Any integer value is valid
+                  for *ndigits* (positive, zero, or negative). The
+                  return value is an integer if *ndigits* is omitted or
+                  ``None``. Otherwise, the return value has the same
+                  type as *number*.
+
+                  For a general Python object ``number``, ``round``
+                  delegates to ``number.__round__``.
+
+                  .. admonition::
+
+                     Note
+
+                     The behavior of ```round()`` <#round>`__ for floats
+                     can be surprising: for example, ``round(2.675, 2)``
+                     gives ``2.67`` instead of the expected ``2.68``.
+                     This is not a bug: it’s a result of the fact that
+                     most decimal fractions can’t be represented exactly
+                     as a float. See `Floating Point Arithmetic: Issues
+                     and
+                     Limitations <https://docs.python.org/3/tutorial/floatingpoint.html#tut-fp-issues>`__
+                     for more information.
+
+               *class* ``set``\ ([\ *iterable*\ ])
+                  Return a new
+                  ```set`` <https://docs.python.org/3/library/stdtypes.html#set>`__
+                  object, optionally with elements taken from
+                  *iterable*. ``set`` is a built-in class. See
+                  ```set`` <https://docs.python.org/3/library/stdtypes.html#set>`__
+                  and `Set Types — set,
+                  frozenset <https://docs.python.org/3/library/stdtypes.html#types-set>`__
+                  for documentation about this class.
+
+                  For other containers see the built-in
+                  ```frozenset`` <https://docs.python.org/3/library/stdtypes.html#frozenset>`__,
+                  ```list`` <https://docs.python.org/3/library/stdtypes.html#list>`__,
+                  ```tuple`` <https://docs.python.org/3/library/stdtypes.html#tuple>`__,
+                  and
+                  ```dict`` <https://docs.python.org/3/library/stdtypes.html#dict>`__
+                  classes, as well as the
+                  ```collections`` <https://docs.python.org/3/library/collections.html#module-collections>`__
+                  module.
+
+               ``setattr``\ (\ *object*, *name*, *value*\ )\ `¶ <#setattr>`__
+                  This is the counterpart of
+                  ```getattr()`` <#getattr>`__. The arguments are an
+                  object, a string, and an arbitrary value. The string
+                  may name an existing attribute or a new attribute. The
+                  function assigns the value to the attribute, provided
+                  the object allows it. For example,
+                  ``setattr(x, 'foobar', 123)`` is equivalent to
+                  ``x.foobar = 123``.
+
+                  .. admonition::
+
+                     Note
+
+                     Since `private name
+                     mangling <https://docs.python.org/3/reference/expressions.html#private-name-mangling>`__
+                     happens at compilation time, one must manually
+                     mangle a private attribute’s (attributes with two
+                     leading underscores) name in order to set it with
+                     ```setattr()`` <#setattr>`__.
+
+               *class* ``slice``\ (\ *stop*\ )\ `¶ <#slice>`__
+               *class* ``slice``\ (\ *start*, *stop*\ [, *step*\ ])
+                  Return a
+                  `slice <https://docs.python.org/3/glossary.html#term-slice>`__
+                  object representing the set of indices specified by
+                  ``range(start, stop, step)``. The *start* and *step*
+                  arguments default to ``None``. Slice objects have
+                  read-only data attributes ``start``, ``stop``, and
+                  ``step`` which merely return the argument values (or
+                  their default). They have no other explicit
+                  functionality; however, they are used by NumPy and
+                  other third-party packages. Slice objects are also
+                  generated when extended indexing syntax is used. For
+                  example: ``a[start:stop:step]`` or
+                  ``a[start:stop, i]``. See
+                  ```itertools.islice()`` <https://docs.python.org/3/library/itertools.html#itertools.islice>`__
+                  for an alternate version that returns an iterator.
+
+               ``sorted``\ (\ *iterable*, */*, *\**, *key=None*, *reverse=False*\ )\ `¶ <#sorted>`__
+                  Return a new sorted list from the items in *iterable*.
+
+                  Has two optional arguments which must be specified as
+                  keyword arguments.
+
+                  *key* specifies a function of one argument that is
+                  used to extract a comparison key from each element in
+                  *iterable* (for example, ``key=str.lower``). The
+                  default value is ``None`` (compare the elements
+                  directly).
+
+                  *reverse* is a boolean value. If set to ``True``, then
+                  the list elements are sorted as if each comparison
+                  were reversed.
+
+                  Use
+                  ```functools.cmp_to_key()`` <https://docs.python.org/3/library/functools.html#functools.cmp_to_key>`__
+                  to convert an old-style *cmp* function to a *key*
+                  function.
+
+                  The built-in ```sorted()`` <#sorted>`__ function is
+                  guaranteed to be stable. A sort is stable if it
+                  guarantees not to change the relative order of
+                  elements that compare equal — this is helpful for
+                  sorting in multiple passes (for example, sort by
+                  department, then by salary grade).
+
+                  The sort algorithm uses only ``<`` comparisons between
+                  items. While defining an
+                  ```__lt__()`` <https://docs.python.org/3/reference/datamodel.html#object.__lt__>`__
+                  method will suffice for sorting, `PEP
+                  8 <https://www.python.org/dev/peps/pep-0008>`__
+                  recommends that all six `rich
+                  comparisons <https://docs.python.org/3/reference/expressions.html#comparisons>`__
+                  be implemented. This will help avoid bugs when using
+                  the same data with other ordering tools such as
+                  ```max()`` <#max>`__ that rely on a different
+                  underlying method. Implementing all six comparisons
+                  also helps avoid confusion for mixed type comparisons
+                  which can call reflected the
+                  ```__gt__()`` <https://docs.python.org/3/reference/datamodel.html#object.__gt__>`__
+                  method.
+
+                  For sorting examples and a brief sorting tutorial, see
+                  `Sorting HOW
+                  TO <https://docs.python.org/3/howto/sorting.html#sortinghowto>`__.
+
+               ``@``\ ``staticmethod``\ `¶ <#staticmethod>`__
+                  Transform a method into a static method.
+
+                  A static method does not receive an implicit first
+                  argument. To declare a static method, use this idiom:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class C:
+                               @staticmethod
+                               def f(arg1, arg2, ...): ...
+
+                  The ``@staticmethod`` form is a function
+                  `decorator <https://docs.python.org/3/glossary.html#term-decorator>`__
+                  – see `Function
+                  definitions <https://docs.python.org/3/reference/compound_stmts.html#function>`__
+                  for details.
+
+                  A static method can be called either on the class
+                  (such as ``C.f()``) or on an instance (such as
+                  ``C().f()``). Moreover, they can be called as regular
+                  functions (such as ``f()``).
+
+                  Static methods in Python are similar to those found in
+                  Java or C++. Also, see
+                  ```classmethod()`` <#classmethod>`__ for a variant
+                  that is useful for creating alternate class
+                  constructors.
+
+                  Like all decorators, it is also possible to call
+                  ``staticmethod`` as a regular function and do
+                  something with its result. This is needed in some
+                  cases where you need a reference to a function from a
+                  class body and you want to avoid the automatic
+                  transformation to instance method. For these cases,
+                  use this idiom:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           def regular_function():
+                               ...
+
+                           class C:
+                               method = staticmethod(regular_function)
+
+                  For more information on static methods, see `The
+                  standard type
+                  hierarchy <https://docs.python.org/3/reference/datamodel.html#types>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.10:Static methods now inherit
+                     the method attributes (``__module__``,
+                     ``__name__``, ``__qualname__``, ``__doc__`` and
+                     ``__annotations__``), have a new ``__wrapped__``
+                     attribute, and are now callable as regular
+                     functions.
+
+               *class* ``str``\ (\ *object=''*\ )
+               *class* ``str``\ (\ *object=b''*, *encoding='utf-8'*, *errors='strict'*\ )
+                  Return a
+                  ```str`` <https://docs.python.org/3/library/stdtypes.html#str>`__
+                  version of *object*. See
+                  ```str()`` <https://docs.python.org/3/library/stdtypes.html#str>`__
+                  for details.
+
+                  ``str`` is the built-in string
+                  `class <https://docs.python.org/3/glossary.html#term-class>`__.
+                  For general information about strings, see `Text
+                  Sequence Type —
+                  str <https://docs.python.org/3/library/stdtypes.html#textseq>`__.
+
+               ``sum``\ (\ *iterable*, */*, *start=0*\ )\ `¶ <#sum>`__
+                  Sums *start* and the items of an *iterable* from left
+                  to right and returns the total. The *iterable*\ ’s
+                  items are normally numbers, and the start value is not
+                  allowed to be a string.
+
+                  For some use cases, there are good alternatives to
+                  ```sum()`` <#sum>`__. The preferred, fast way to
+                  concatenate a sequence of strings is by calling
+                  ``''.join(sequence)``. To add floating point values
+                  with extended precision, see
+                  ```math.fsum()`` <https://docs.python.org/3/library/math.html#math.fsum>`__.
+                  To concatenate a series of iterables, consider using
+                  ```itertools.chain()`` <https://docs.python.org/3/library/itertools.html#itertools.chain>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.8:The *start* parameter can be
+                     specified as a keyword argument.
+
+               *class* ``super``\ ([\ *type*\ [, *object-or-type*\ ]])\ `¶ <#super>`__
+                  Return a proxy object that delegates method calls to a
+                  parent or sibling class of *type*. This is useful for
+                  accessing inherited methods that have been overridden
+                  in a class.
+
+                  The *object-or-type* determines the `method resolution
+                  order <https://docs.python.org/3/glossary.html#term-method-resolution-order>`__
+                  to be searched. The search starts from the class right
+                  after the *type*.
+
+                  For example, if
+                  ```__mro__`` <https://docs.python.org/3/library/stdtypes.html#class.__mro__>`__
+                  of *object-or-type* is ``D -> B -> C -> A -> object``
+                  and the value of *type* is ``B``, then
+                  ```super()`` <#super>`__ searches
+                  ``C -> A -> object``.
+
+                  The
+                  ```__mro__`` <https://docs.python.org/3/library/stdtypes.html#class.__mro__>`__
+                  attribute of the *object-or-type* lists the method
+                  resolution search order used by both
+                  ```getattr()`` <#getattr>`__ and
+                  ```super()`` <#super>`__. The attribute is dynamic and
+                  can change whenever the inheritance hierarchy is
+                  updated.
+
+                  If the second argument is omitted, the super object
+                  returned is unbound. If the second argument is an
+                  object, ``isinstance(obj, type)`` must be true. If the
+                  second argument is a type, ``issubclass(type2, type)``
+                  must be true (this is useful for classmethods).
+
+                  There are two typical use cases for *super*. In a
+                  class hierarchy with single inheritance, *super* can
+                  be used to refer to parent classes without naming them
+                  explicitly, thus making the code more maintainable.
+                  This use closely parallels the use of *super* in other
+                  programming languages.
+
+                  The second use case is to support cooperative multiple
+                  inheritance in a dynamic execution environment. This
+                  use case is unique to Python and is not found in
+                  statically compiled languages or languages that only
+                  support single inheritance. This makes it possible to
+                  implement “diamond diagrams” where multiple base
+                  classes implement the same method. Good design
+                  dictates that such implementations have the same
+                  calling signature in every case (because the order of
+                  calls is determined at runtime, because that order
+                  adapts to changes in the class hierarchy, and because
+                  that order can include sibling classes that are
+                  unknown prior to runtime).
+
+                  For both use cases, a typical superclass call looks
+                  like this:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           class C(B):
+                               def method(self, arg):
+                                   super().method(arg)    # This does the same thing as:
+                                                          # super(C, self).method(arg)
+
+                  In addition to method lookups,
+                  ```super()`` <#super>`__ also works for attribute
+                  lookups. One possible use case for this is calling
+                  `descriptors <https://docs.python.org/3/glossary.html#term-descriptor>`__
+                  in a parent or sibling class.
+
+                  Note that ```super()`` <#super>`__ is implemented as
+                  part of the binding process for explicit dotted
+                  attribute lookups such as
+                  ``super().__getitem__(name)``. It does so by
+                  implementing its own ``__getattribute__()`` method for
+                  searching classes in a predictable order that supports
+                  cooperative multiple inheritance. Accordingly,
+                  ```super()`` <#super>`__ is undefined for implicit
+                  lookups using statements or operators such as
+                  ``super()[name]``.
+
+                  Also note that, aside from the zero argument form,
+                  ```super()`` <#super>`__ is not limited to use inside
+                  methods. The two argument form specifies the arguments
+                  exactly and makes the appropriate references. The zero
+                  argument form only works inside a class definition, as
+                  the compiler fills in the necessary details to
+                  correctly retrieve the class being defined, as well as
+                  accessing the current instance for ordinary methods.
+
+                  For practical suggestions on how to design cooperative
+                  classes using ```super()`` <#super>`__, see `guide to
+                  using
+                  super() <https://rhettinger.wordpress.com/2011/05/26/super-considered-super/>`__.
+
+               *class* ``tuple``\ ([\ *iterable*\ ])
+                  Rather than being a function,
+                  ```tuple`` <https://docs.python.org/3/library/stdtypes.html#tuple>`__
+                  is actually an immutable sequence type, as documented
+                  in
+                  `Tuples <https://docs.python.org/3/library/stdtypes.html#typesseq-tuple>`__
+                  and `Sequence Types — list, tuple,
+                  range <https://docs.python.org/3/library/stdtypes.html#typesseq>`__.
+
+               *class* ``type``\ (\ *object*\ )\ `¶ <#type>`__
+               *class* ``type``\ (\ *name*, *bases*, *dict*, *\*\*kwds*\ )
+                  With one argument, return the type of an *object*. The
+                  return value is a type object and generally the same
+                  object as returned by
+                  ```object.__class__`` <https://docs.python.org/3/library/stdtypes.html#instance.__class__>`__.
+
+                  The ```isinstance()`` <#isinstance>`__ built-in
+                  function is recommended for testing the type of an
+                  object, because it takes subclasses into account.
+
+                  With three arguments, return a new type object. This
+                  is essentially a dynamic form of the
+                  ```class`` <https://docs.python.org/3/reference/compound_stmts.html#class>`__
+                  statement. The *name* string is the class name and
+                  becomes the
+                  ```__name__`` <https://docs.python.org/3/library/stdtypes.html#definition.__name__>`__
+                  attribute. The *bases* tuple contains the base classes
+                  and becomes the
+                  ```__bases__`` <https://docs.python.org/3/library/stdtypes.html#class.__bases__>`__
+                  attribute; if empty, ```object`` <#object>`__, the
+                  ultimate base of all classes, is added. The *dict*
+                  dictionary contains attribute and method definitions
+                  for the class body; it may be copied or wrapped before
+                  becoming the
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute. The following two statements create
+                  identical ```type`` <#type>`__ objects:
+
+                  .. container:: doctest highlight-default notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> class X:
+                           ...     a = 1
+                           ...
+                           >>> X = type('X', (), dict(a=1))
+
+                  See also `Type
+                  Objects <https://docs.python.org/3/library/stdtypes.html#bltin-type-objects>`__.
+
+                  Keyword arguments provided to the three argument form
+                  are passed to the appropriate metaclass machinery
+                  (usually
+                  ```__init_subclass__()`` <https://docs.python.org/3/reference/datamodel.html#object.__init_subclass__>`__)
+                  in the same way that keywords in a class definition
+                  (besides *metaclass*) would.
+
+                  See also `Customizing class
+                  creation <https://docs.python.org/3/reference/datamodel.html#class-customization>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.6:Subclasses of
+                     ```type`` <#type>`__ which don’t override
+                     ``type.__new__`` may no longer use the one-argument
+                     form to get the type of an object.
+
+               ``vars``\ ([\ *object*\ ])\ `¶ <#vars>`__
+                  Return the
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute for a module, class, instance, or any other
+                  object with a
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute.
+
+                  Objects such as modules and instances have an
+                  updateable
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute; however, other objects may have write
+                  restrictions on their
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attributes (for example, classes use a
+                  ```types.MappingProxyType`` <https://docs.python.org/3/library/types.html#types.MappingProxyType>`__
+                  to prevent direct dictionary updates).
+
+                  Without an argument, ```vars()`` <#vars>`__ acts like
+                  ```locals()`` <#locals>`__. Note, the locals
+                  dictionary is only useful for reads since updates to
+                  the locals dictionary are ignored.
+
+                  A
+                  ```TypeError`` <https://docs.python.org/3/library/exceptions.html#TypeError>`__
+                  exception is raised if an object is specified but it
+                  doesn’t have a
+                  ```__dict__`` <https://docs.python.org/3/library/stdtypes.html#object.__dict__>`__
+                  attribute (for example, if its class defines the
+                  ```__slots__`` <https://docs.python.org/3/reference/datamodel.html#object.__slots__>`__
+                  attribute).
+
+               ``zip``\ (\ *\*iterables*, *strict=False*\ )\ `¶ <#zip>`__
+                  Iterate over several iterables in parallel, producing
+                  tuples with an item from each one.
+
+                  Example:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        >>>
+                        ::
+
+                           >>> for item in zip([1, 2, 3], ['sugar', 'spice', 'everything nice']):
+                           ...     print(item)
+                           ...
+                           (1, 'sugar')
+                           (2, 'spice')
+                           (3, 'everything nice')
+
+                  More formally: ```zip()`` <#zip>`__ returns an
+                  iterator of tuples, where the *i*-th tuple contains
+                  the *i*-th element from each of the argument
+                  iterables.
+
+                  Another way to think of ```zip()`` <#zip>`__ is that
+                  it turns rows into columns, and columns into rows.
+                  This is similar to `transposing a
+                  matrix <https://en.wikipedia.org/wiki/Transpose>`__.
+
+                  ```zip()`` <#zip>`__ is lazy: The elements won’t be
+                  processed until the iterable is iterated on, e.g. by a
+                  ``for`` loop or by wrapping in a
+                  ```list`` <https://docs.python.org/3/library/stdtypes.html#list>`__.
+
+                  One thing to consider is that the iterables passed to
+                  ```zip()`` <#zip>`__ could have different lengths;
+                  sometimes by design, and sometimes because of a bug in
+                  the code that prepared these iterables. Python offers
+                  three different approaches to dealing with this issue:
+
+                  -  By default, ```zip()`` <#zip>`__ stops when the
+                     shortest iterable is exhausted. It will ignore the
+                     remaining items in the longer iterables, cutting
+                     off the result to the length of the shortest
+                     iterable:
+
+                     .. container:: highlight-python3 notranslate
+
+                        .. container:: highlight
+
+                           >>>
+                           ::
+
+                              >>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum']))
+                              [(0, 'fee'), (1, 'fi'), (2, 'fo')]
+
+                  -  ```zip()`` <#zip>`__ is often used in cases where
+                     the iterables are assumed to be of equal length. In
+                     such cases, it’s recommended to use the
+                     ``strict=True`` option. Its output is the same as
+                     regular ```zip()`` <#zip>`__:
+
+                     .. container:: highlight-python3 notranslate
+
+                        .. container:: highlight
+
+                           >>>
+                           ::
+
+                              >>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))
+                              [('a', 1), ('b', 2), ('c', 3)]
+
+                     Unlike the default behavior, it checks that the
+                     lengths of iterables are identical, raising a
+                     ```ValueError`` <https://docs.python.org/3/library/exceptions.html#ValueError>`__
+                     if they aren’t:
+
+                     .. container::
+                     doctest highlight-default notranslate
+
+                        .. container:: highlight
+
+                           >>>
+                           ::
+
+                              >>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum'], strict=True))
+                              Traceback (most recent call last):
+                                ...
+                              ValueError: zip() argument 2 is longer than argument 1
+
+                     Without the ``strict=True`` argument, any bug that
+                     results in iterables of different lengths will be
+                     silenced, possibly manifesting as a hard-to-find
+                     bug in another part of the program.
+
+                  -  Shorter iterables can be padded with a constant
+                     value to make all the iterables have the same
+                     length. This is done by
+                     ```itertools.zip_longest()`` <https://docs.python.org/3/library/itertools.html#itertools.zip_longest>`__.
+
+                  Edge cases: With a single iterable argument,
+                  ```zip()`` <#zip>`__ returns an iterator of 1-tuples.
+                  With no arguments, it returns an empty iterator.
+
+                  Tips and tricks:
+
+                  -  The left-to-right evaluation order of the iterables
+                     is guaranteed. This makes possible an idiom for
+                     clustering a data series into n-length groups using
+                     ``zip(*[iter(s)]*n, strict=True)``. This repeats
+                     the *same* iterator ``n`` times so that each output
+                     tuple has the result of ``n`` calls to the
+                     iterator. This has the effect of dividing the input
+                     into n-length chunks.
+
+                  -  ```zip()`` <#zip>`__ in conjunction with the ``*``
+                     operator can be used to unzip a list:
+
+                     .. container:: highlight-python3 notranslate
+
+                        .. container:: highlight
+
+                           >>>
+                           ::
+
+                              >>> x = [1, 2, 3]
+                              >>> y = [4, 5, 6]
+                              >>> list(zip(x, y))
+                              [(1, 4), (2, 5), (3, 6)]
+                              >>> x2, y2 = zip(*zip(x, y))
+                              >>> x == list(x2) and y == list(y2)
+                              True
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.10:Added the ``strict``
+                     argument.
+
+               ``__import__``\ (\ *name*, *globals=None*, *locals=None*, *fromlist=()*, *level=0*\ )\ `¶ <#import__>`__
+                  .. admonition::
+                     :name: index-12
+
+                     Note
+
+                     This is an advanced function that is not needed in
+                     everyday Python programming, unlike
+                     ```importlib.import_module()`` <https://docs.python.org/3/library/importlib.html#importlib.import_module>`__.
+
+                  This function is invoked by the
+                  ```import`` <https://docs.python.org/3/reference/simple_stmts.html#import>`__
+                  statement. It can be replaced (by importing the
+                  ```builtins`` <https://docs.python.org/3/library/builtins.html#module-builtins>`__
+                  module and assigning to ``builtins.__import__``) in
+                  order to change semantics of the ``import`` statement,
+                  but doing so is **strongly** discouraged as it is
+                  usually simpler to use import hooks (see `PEP
+                  302 <https://www.python.org/dev/peps/pep-0302>`__) to
+                  attain the same goals and does not cause issues with
+                  code which assumes the default import implementation
+                  is in use. Direct use of
+                  ```__import__()`` <#import__>`__ is also discouraged
+                  in favor of
+                  ```importlib.import_module()`` <https://docs.python.org/3/library/importlib.html#importlib.import_module>`__.
+
+                  The function imports the module *name*, potentially
+                  using the given *globals* and *locals* to determine
+                  how to interpret the name in a package context. The
+                  *fromlist* gives the names of objects or submodules
+                  that should be imported from the module given by
+                  *name*. The standard implementation does not use its
+                  *locals* argument at all and uses its *globals* only
+                  to determine the package context of the
+                  ```import`` <https://docs.python.org/3/reference/simple_stmts.html#import>`__
+                  statement.
+
+                  *level* specifies whether to use absolute or relative
+                  imports. ``0`` (the default) means only perform
+                  absolute imports. Positive values for *level* indicate
+                  the number of parent directories to search relative to
+                  the directory of the module calling
+                  ```__import__()`` <#import__>`__ (see `PEP
+                  328 <https://www.python.org/dev/peps/pep-0328>`__ for
+                  the details).
+
+                  When the *name* variable is of the form
+                  ``package.module``, normally, the top-level package
+                  (the name up till the first dot) is returned, *not*
+                  the module named by *name*. However, when a non-empty
+                  *fromlist* argument is given, the module named by
+                  *name* is returned.
+
+                  For example, the statement ``import spam`` results in
+                  bytecode resembling the following code:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           spam = __import__('spam', globals(), locals(), [], 0)
+
+                  The statement ``import spam.ham`` results in this
+                  call:
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           spam = __import__('spam.ham', globals(), locals(), [], 0)
+
+                  Note how ```__import__()`` <#import__>`__ returns the
+                  toplevel module here because this is the object that
+                  is bound to a name by the
+                  ```import`` <https://docs.python.org/3/reference/simple_stmts.html#import>`__
+                  statement.
+
+                  On the other hand, the statement
+                  ``from spam.ham import eggs, sausage as saus`` results
+                  in
+
+                  .. container:: highlight-python3 notranslate
+
+                     .. container:: highlight
+
+                        ::
+
+                           _temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], 0)
+                           eggs = _temp.eggs
+                           saus = _temp.sausage
+
+                  Here, the ``spam.ham`` module is returned from
+                  ```__import__()`` <#import__>`__. From this object,
+                  the names to import are retrieved and assigned to
+                  their respective names.
+
+                  If you simply want to import a module (potentially
+                  within a package) by name, use
+                  ```importlib.import_module()`` <https://docs.python.org/3/library/importlib.html#importlib.import_module>`__.
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.3:Negative values for *level*
+                     are no longer supported (which also changes the
+                     default value to 0).
+
+                  .. container:: versionchanged
+
+                     Changed in version 3.9:When the command line
+                     options
+                     ```-E`` <https://docs.python.org/3/using/cmdline.html#cmdoption-E>`__
+                     or
+                     ```-I`` <https://docs.python.org/3/using/cmdline.html#cmdoption-I>`__
+                     are being used, the environment variable
+                     ```PYTHONCASEOK`` <https://docs.python.org/3/using/cmdline.html#envvar-PYTHONCASEOK>`__
+                     is now ignored.
+
+               Footnotes
+
+               `1 <#id1>`__
+                  Note that the parser only accepts the Unix-style end
+                  of line convention. If you are reading the code from a
+                  file, make sure to use newline conversion mode to
+                  convert Windows or Mac-style newlines.
+
+            .. container:: clearer
+
+   .. container:: sphinxsidebar
+
+      .. container:: sphinxsidebarwrapper
+
+         .. rubric:: Previous topic
+            :name: previous-topic-1
+
+         `Introduction <https://docs.python.org/3/library/intro.html>`__
+
+         .. rubric:: Next topic
+            :name: next-topic-1
+
+         `Built-in
+         Constants <https://docs.python.org/3/library/constants.html>`__
+
+         .. container::
+
+            .. rubric:: This Page
+               :name: this-page-1
+
+            -  `Report a Bug <https://docs.python.org/3/bugs.html>`__
+            -  `Show
+               Source <https://github.com/python/cpython/blob/3.10/Doc/library/functions.rst>`__
+
+      .. container::
+         :name: sidebarbutton
+
+         «
+
+   .. container:: clearer
+
+.. container:: related
+
+   .. rubric:: Navigation
+      :name: navigation-1
+
+   -  `index <https://docs.python.org/3/genindex.html>`__
+
+   -  `modules <https://docs.python.org/3/py-modindex.html>`__ \|
+
+   -  `next <https://docs.python.org/3/library/constants.html>`__ \|
+
+   -  `previous <https://docs.python.org/3/library/intro.html>`__ \|
+
+   -  |python logo|
+
+   -  `Python <https://www.python.org/>`__ »
+
+   -  
+
+      .. container:: language_switcher_placeholder
+
+         EnglishSpanishFrenchJapaneseKoreanBrazilian
+         PortugueseSimplified ChineseTraditional Chinese
+
+      .. container:: version_switcher_placeholder
+
+         dev (3.12)pre (3.11)3.10.53.93.83.73.63.52.7
+
+   -  
+
+   -  `3.10.5 Documentation <https://docs.python.org/3/index.html>`__ »
+
+   -  `The Python Standard
+      Library <https://docs.python.org/3/library/index.html>`__ »
+
+   -  `Built-in Functions <>`__
+
+   -  
+
+      .. container:: inline-search
+
+      \|
+
+.. container:: footer
+
+   © `Copyright <https://docs.python.org/3/copyright.html>`__ 2001-2022,
+   Python Software Foundation.
+   This page is licensed under the Python Software Foundation License
+   Version 2.
+   Examples, recipes, and other code in the documentation are
+   additionally licensed under the Zero Clause BSD License.
+   See `History and License <https://docs.python.org/license.html>`__
+   for more information.
+   The Python Software Foundation is a non-profit corporation. `Please
+   donate. <https://www.python.org/psf/donations/>`__
+   Last updated on Jun 17, 2022. `Found a
+   bug <https://docs.python.org/bugs.html>`__?
+   Created using `Sphinx <https://www.sphinx-doc.org/>`__ 3.4.3.
+
+.. |Logo| image:: builtins_files/py.svg
+   :target: https://www.python.org/
+.. |image1| image:: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld2JveD0iMCAwIDI0IDI0IiBjbGFzcz0ic2VhcmNoLWljb24iPgogICAgICAgICAgICAgICAgPHBhdGggZmlsbC1ydWxlPSJub256ZXJvIiBkPSJNMTUuNSAxNGgtLjc5bC0uMjgtLjI3YTYuNSA2LjUgMCAwMDEuNDgtNS4zNGMtLjQ3LTIuNzgtMi43OS01LTUuNTktNS4zNGE2LjUwNSA2LjUwNSAwIDAwLTcuMjcgNy4yN2MuMzQgMi44IDIuNTYgNS4xMiA1LjM0IDUuNTlhNi41IDYuNSAwIDAwNS4zNC0xLjQ4bC4yNy4yOHYuNzlsNC4yNSA0LjI1Yy40MS40MSAxLjA4LjQxIDEuNDkgMCAuNDEtLjQxLjQxLTEuMDggMC0xLjQ5TDE1LjUgMTR6bS02IDBDNy4wMSAxNCA1IDExLjk5IDUgOS41UzcuMDEgNSA5LjUgNSAxNCA3LjAxIDE0IDkuNSAxMS45OSAxNCA5LjUgMTR6IiBmaWxsPSIjNDQ0Ij48L3BhdGg+CiAgICAgICAgICAgIDwvc3ZnPg==
+   :class: search-icon
+.. |python logo| image:: builtins_files/py.svg

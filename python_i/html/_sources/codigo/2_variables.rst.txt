@@ -1,0 +1,223 @@
+.. code:: ipython3
+
+    help('keywords')
+
+
+.. parsed-literal::
+
+    
+    Here is a list of the Python keywords.  Enter any keyword to get more help.
+    
+    False               break               for                 not
+    None                class               from                or
+    True                continue            global              pass
+    __peg_parser__      def                 if                  raise
+    and                 del                 import              return
+    as                  elif                in                  try
+    assert              else                is                  while
+    async               except              lambda              with
+    await               finally             nonlocal            yield
+    
+
+
+.. code:: ipython3
+
+    import this
+
+
+.. parsed-literal::
+
+    The Zen of Python, by Tim Peters
+    
+    Beautiful is better than ugly.
+    Explicit is better than implicit.
+    Simple is better than complex.
+    Complex is better than complicated.
+    Flat is better than nested.
+    Sparse is better than dense.
+    Readability counts.
+    Special cases aren't special enough to break the rules.
+    Although practicality beats purity.
+    Errors should never pass silently.
+    Unless explicitly silenced.
+    In the face of ambiguity, refuse the temptation to guess.
+    There should be one-- and preferably only one --obvious way to do it.
+    Although that way may not be obvious at first unless you're Dutch.
+    Now is better than never.
+    Although never is often better than *right* now.
+    If the implementation is hard to explain, it's a bad idea.
+    If the implementation is easy to explain, it may be a good idea.
+    Namespaces are one honking great idea -- let's do more of those!
+
+
+Números
+=======
+
+.. code:: ipython3
+
+    type(2)
+
+
+
+
+.. parsed-literal::
+
+    int
+
+
+
+.. code:: ipython3
+
+    type(2.0)
+
+
+
+
+.. parsed-literal::
+
+    float
+
+
+
+.. code:: ipython3
+
+    2 < 2.1
+
+
+
+
+.. parsed-literal::
+
+    True
+
+
+
+.. code:: ipython3
+
+    z = complex(1,2)
+
+.. code:: ipython3
+
+    2J == 2j
+
+
+
+
+.. parsed-literal::
+
+    True
+
+
+
+.. code:: ipython3
+
+    type(True)
+
+
+
+
+.. parsed-literal::
+
+    bool
+
+
+
+.. code:: ipython3
+
+    type(True + True + True)
+
+
+
+
+.. parsed-literal::
+
+    int
+
+
+
+Atributos y Métodos
+===================
+
+.. code:: ipython3
+
+    z.conjugate??
+
+.. code:: ipython3
+
+    abs(z)
+
+
+
+
+.. parsed-literal::
+
+    2.23606797749979
+
+
+
+Variables
+=========
+
+.. code:: ipython3
+
+    x = 1
+    y = 'elquijotenverbo'
+
+Operadores
+==========
+
+.. code:: ipython3
+
+    '2'+'2'
+
+
+
+
+.. parsed-literal::
+
+    '22'
+
+
+
+.. code:: ipython3
+
+    abs(z)
+
+
+
+
+.. parsed-literal::
+
+    2.23606797749979
+
+
+
+.. code:: ipython3
+
+    x = 100
+    y = 3
+    x/y== (x//y )+ (x%y)/y
+
+
+
+
+.. parsed-literal::
+
+    True
+
+
+
+``input`` y ``format``
+======================
+
+.. code:: ipython3
+
+    nombre = input("Hola, ¿Cómo te llamas? ")
+    print("Me llamo {0}".format(nombre))
+
+
+.. parsed-literal::
+
+    Hola, ¿Cómo te llamas? Pepe
+    Me llamo Pepe
+

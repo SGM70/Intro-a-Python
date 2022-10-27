@@ -1,0 +1,50 @@
+Listas
+======
+
+.. code:: ipython3
+
+    lista_1 = [2, [3,-2], 'a']
+    lista_1.append('hola')
+    lista_1.append(True)
+    print(lista_1)
+    lista_1 = lista_1 + [['44', complex(-1,1)]]
+    print(lista_1)
+
+
+.. parsed-literal::
+
+    [2, [3, -2], 'a', 'hola', True]
+    [2, [3, -2], 'a', 'hola', True, ['44', (-1+1j)]]
+
+
+.. code:: ipython3
+
+    lista_2 = [2, 2.0, complex(1,-1), 2>2.1, 2J == 2j]
+    tipos = []
+    for l in lista_2:
+        tipos.append(type(l))
+    for l in zip(lista_2, tipos):
+        print("el tipo de {0} es {1}".format(l[0], l[1]))
+
+
+.. parsed-literal::
+
+    el tipo de 2 es <class 'int'>
+    el tipo de 2.0 es <class 'float'>
+    el tipo de (1-1j) es <class 'complex'>
+    el tipo de False es <class 'bool'>
+    el tipo de True es <class 'bool'>
+
+
+.. code:: ipython3
+
+    type(lista)
+
+
+
+
+.. parsed-literal::
+
+    list
+
+

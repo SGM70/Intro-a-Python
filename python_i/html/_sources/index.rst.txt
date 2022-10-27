@@ -1,0 +1,29 @@
+.. python_i documentation master file, created by
+   sphinx-quickstart on Wed Jun 15 13:11:04 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+¡Bienvenidos a Python I!
+=======================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tabla de Contenidos
+   :numbered:
+
+
+   
+   docs/1_principios
+   docs/2_variables
+   docs/3_loops
+   docs/4_funciones
+   ...
+
+
+
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
